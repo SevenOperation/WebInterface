@@ -1,0 +1,840 @@
+[VERSION] loading version from install dir: .\
+[VERSION] VERSION: 0.199.535
+[VERSION] BUILD: 20170427_155818
+#################### StarMade #######################
+# version 0.199.535 - build 20170427_155818 #
+#####################################################
+[SERIAL] "not retrieved"
+[INSTALLATION_DIRECTORY] "E:\SteamLibrary\steamapps\common\StarMade\StarMade\."
+[JVM-ARGUMENTS] [-Xms2048m, -Xmx6144m, -Xincgc, -Xshare:off]
+[TEXTURE-PACK] WARNING: ignoring lava.png: not a directory
+[TEXTURE-PACK] WARNING: ignoring lava.png.zip: not a directory
+[TEXTURE-PACK] WARNING: ignoring shield_tex.png: not a directory
+[TEXTURE-PACK] WARNING: ignoring shield_tex.png.zip: not a directory
+[TEXTURE-PACK] WARNING: ignoring lava.png: not a directory
+[TEXTURE-PACK] WARNING: ignoring lava.png.zip: not a directory
+[TEXTURE-PACK] WARNING: ignoring shield_tex.png: not a directory
+[TEXTURE-PACK] WARNING: ignoring shield_tex.png.zip: not a directory
+[STARTER] template dir exists. overwriting template with current data
+[IO][COPY] FILE FROM E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\data\config\FactionConfig.xml to E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\customFactionConfig\FactionConfigTemplate.xml
+[IO][COPY] FILE FROM E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\data\config\customFactionConfigHOWTO.txt to E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\customFactionConfig\customFactionConfigHOWTO.txt
+[STARTER] template dir exists. overwriting template with current data
+[IO][COPY] FILE FROM E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\data\config\customBlockBehaviorConfigTemplate.xml to E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\customBlockBehaviorConfig\customBlockBehaviorConfigTemplate.xml
+[IO][COPY] FILE FROM E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\data\config\customBlockBehaviorConfigHOWTO.txt to E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\customBlockBehaviorConfig\customBlockBehaviorConfigHOWTO.txt
+[RESOURCES][CustomTextures] No need to create pack.zip. Hash matches (as rewriting a zip changes the hash on it)
+[LANGUAGE] loading language: english; Resolved to english
+[LANGUAGE] Loading English; Version: 0
+[LANGUAGE] LOADED FONT PATH/NAME: font/Monda-Regular.ttf
+[SERVER] using world: freeplay; .\server-database\freeplay\
+[INIT] Segment Database Path: E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\server-database\freeplay\DATA; exists? true; is Dir? true; creating dir successful (gives false if exists)? false
+[LIBLOADER] OS Windows 10 - 10.0
+[LIBLOADER] JAVA Oracle Corporation - 1.8.0_121 - C:\Program Files\Java\jre1.8.0_121
+[LIBLOADER] ARCHITECTURE amd64
+[LIBLOADER] LOADED WINDOWS 64bit NATIVE LIBRARIES 
+[LIBLOADER] FastNoiseSIMD Level: 3
+[LIBLOADER] COMPLETE 
+[MAIN] CHECKING IF MIGRATION NECESSARY
+[MAIN] MIGRATION PROCESS DONE
+[MAIN] STARTING WITH ARGUMENTS: [-server]
+[MAIN] LOADED ENGINE SETTINGS
+[INITIALIZE] REMOTE CLASSES REGISTERED
+[INITIALIZE] RESOURCE MANAGER INITIALIZED
+ERROR: no content in Resource: E:\SteamLibrary\steamapps\common\StarMade\StarMade\file:\E:\SteamLibrary\steamapps\common\StarMade\StarMade\StarMade.jar!\org\schema\game\network\commands
+################# Loading from JAR #####################
+########################################################
+[INITIALIZE] REMOTE COMMANDS REGISTERED
+[INITIALIZE] SECURITY MANAGER SET
+[INITIALIZE] COMMAND ID's ASSIGNED. NOW READING BLOCK CONFIG
+[INITIALIZE] BLOCK CONFIGURATION READ
+[BLUEPRINT][MIGRATION] NO CONVERSION NEEDED: no old bb file exists: E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\blueprints\catalog.txt
+[SERVER] ###### READING ALL BLUEPRINTS!
+[SERVER] ###### READING ALL 19 BLUEPRINTS FINISHED! TOOK 851ms
+[MAIN] INITIALIZATION COMPLETED
+[SERVER] initializing 
+java.lang.Exception: Server Shutdown: false
+	at org.schema.schine.network.server.ServerState.setShutdown(SourceFile:258)
+	at obfuscated.WL.run(SourceFile:1521)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.Exception: Server created: true
+	at org.schema.schine.network.server.ServerState.setCreated(SourceFile:266)
+	at org.schema.schine.network.server.ServerState.<init>(SourceFile:49)
+	at obfuscated.axt.<init>(SourceFile:303)
+	at obfuscated.WL.run(SourceFile:1523)
+	at java.lang.Thread.run(Unknown Source)
+[SERVER] Server State Created!
+[INIT] Seed File: E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\server-database\freeplay\.seed
+[SQL] Fetching connection (may take some if game crashed on the run before)
+[SQL] connection successfull
+[DATABASE] ENTITIES UID SIZE: 128
+[DATABASE] FTL UID SIZE: 128
+[DATABASE] SYSTEMS UID SIZE: 128
+Server(0) Reading CHAT CHANNEL ROUTER E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\server-database\freeplay\chatchannels.tag
+[SERVER] Request Thread pool size is: 10
+EXPLOSION DATA: aggregation data: dim size: 128; total Memory used: 4 MB; max memory: 5,9 GB
+[EXPLOSION] DATA: ray info data: dim size: 16; total instances used: 4096
+[EXPLOSION] Array init took 0 ms
+[EXPLOSION] 'Ray' File read took 1ms
+[EXPLOSION] DATA: sizeOrder size: 10485760 -> 40 MB
+[EXPLOSION] 'Order' File read took 261 ms
+[SERVER] port 4242 is open
+[SERVER] USING TCP... 
+[PARSER] not parsed: attackingMelee
+[PARSER] not parsed: attackingMeleeFloating
+[PARSER] not parsed: attackingMeleeGravity
+[PARSER] not parsed: upperBodyGunMelee
+[PARSER] not parsed: upperBodyBareHandMelee
+[PARSER] not parsed: idlingFloating
+[PARSER] not parsed: idlingGravity
+[PARSER] not parsed: dancingGravity
+[PARSER] not parsed: movingJumpingJumpUp
+[PARSER] not parsed: movingJumpingJumpDown
+[PARSER] not parsed: movingFallingStandard
+[PARSER] not parsed: movingFallingLedge
+[PARSER] not parsed: movingLandingShortFall
+[PARSER] not parsed: movingLandingMiddleFall
+[PARSER] not parsed: movingLandingLongFall
+[PARSER] not parsed: movingNoGravityGravToNoGrav
+[PARSER] not parsed: movingNoGravityNoGravToGrav
+[PARSER] not parsed: movingNoGravityFloatMoveN
+[PARSER] not parsed: movingNoGravityFloatMoveS
+[PARSER] not parsed: movingNoGravityFloatMoveUp
+[PARSER] not parsed: movingNoGravityFloatMoveDown
+[PARSER] not parsed: movingNoGravityFloatRot
+[PARSER] not parsed: movingNoGravityFloatHit
+[PARSER] not parsed: movingNoGravityFloatDeath
+[PARSER] not parsed: movingByFootCrawling
+[PARSER] not parsed: movingByFootCrawlingNorth
+[PARSER] not parsed: movingByFootCrawlingSouth
+[PARSER] not parsed: movingByFootCrawlingWest
+[PARSER] not parsed: movingByFootCrawlingEast
+[PARSER] not parsed: movingByFootCrawlingNorthEast
+[PARSER] not parsed: movingByFootCrawlingNorthWest
+[PARSER] not parsed: movingByFootCrawlingSouthWest
+[PARSER] not parsed: movingByFootCrawlingSouthEast
+[PARSER] not parsed: movingByFootSlowWalking
+[PARSER] not parsed: movingByFootSlowWalkingNorth
+[PARSER] not parsed: movingByFootSlowWalkingSouth
+[PARSER] not parsed: movingByFootSlowWalkingWest
+[PARSER] not parsed: movingByFootSlowWalkingEast
+[PARSER] not parsed: movingByFootSlowWalkingNorthEast
+[PARSER] not parsed: movingByFootSlowWalkingNorthWest
+[PARSER] not parsed: movingByFootSlowWalkingSouthWest
+[PARSER] not parsed: movingByFootSlowWalkingSouthEast
+[PARSER] not parsed: movingByFootWalking
+[PARSER] not parsed: movingByFootWalkingNorth
+[PARSER] not parsed: movingByFootWalkingSouth
+[PARSER] not parsed: movingByFootWalkingWest
+[PARSER] not parsed: movingByFootWalkingEast
+[PARSER] not parsed: movingByFootWalkingNorthEast
+[PARSER] not parsed: movingByFootWalkingNorthWest
+[PARSER] not parsed: movingByFootWalkingSouthWest
+[PARSER] not parsed: movingByFootWalkingSouthEast
+[PARSER] not parsed: movingByFootRunning
+[PARSER] not parsed: movingByFootRunningNorth
+[PARSER] not parsed: movingByFootRunningSouth
+[PARSER] not parsed: movingByFootRunningWest
+[PARSER] not parsed: movingByFootRunningEast
+[PARSER] not parsed: movingByFootRunningNorthEast
+[PARSER] not parsed: movingByFootRunningNorthWest
+[PARSER] not parsed: movingByFootRunningSouthWest
+[PARSER] not parsed: movingByFootRunningSouthEast
+[PARSER] not parsed: upperBodyBareHandMelee
+[PARSER] not parsed: upperBodyGun
+[PARSER] not parsed: upperBodyGunIdle
+[PARSER] not parsed: upperBodyGunIdleIn
+[PARSER] not parsed: upperBodyGunDraw
+[PARSER] not parsed: upperBodyGunAway
+[PARSER] not parsed: upperBodyGunFire
+[PARSER] not parsed: upperBodyGunFireHeavy
+[PARSER] not parsed: upperBodyGunMelee
+[PARSER] not parsed: upperBodyFabricator
+[PARSER] not parsed: upperBodyFabricatorIdle
+[PARSER] not parsed: upperBodyFabricatorDraw
+[PARSER] not parsed: upperBodyFabricatorAway
+[PARSER] not parsed: upperBodyFabricatorFire
+[PARSER] not parsed: upperBodyFabricatorPumpAction
+[PARSER] not parsed: attacking
+[PARSER] not parsed: attackingMelee
+[PARSER] not parsed: attackingMeleeFloating
+[PARSER] not parsed: attackingMeleeGravity
+[PARSER] not parsed: death
+[PARSER] not parsed: deathFloating
+[PARSER] not parsed: deathGravity
+[PARSER] not parsed: sitting
+[PARSER] not parsed: sittingBlock
+[PARSER] not parsed: sittingBlockNoFloor
+[PARSER] not parsed: sittingBlockNoFloorIdle
+[PARSER] not parsed: sittingBlockFloor
+[PARSER] not parsed: sittingBlockFloorIdle
+[PARSER] not parsed: sittingWedge
+[PARSER] not parsed: sittingWedgeNoFloor
+[PARSER] not parsed: sittingWedgeNoFloorIdle
+[PARSER] not parsed: sittingWedgeFloor
+[PARSER] not parsed: sittingWedgeFloorIdle
+[PARSER] not parsed: hit
+[PARSER] not parsed: hitSmall
+[PARSER] not parsed: hitSmallFloating
+[PARSER] not parsed: hitSmallGravity
+[PARSER] not parsed: salutes
+[PARSER] not parsed: salutesSalute
+[PARSER] not parsed: talk
+[PARSER] not parsed: talkSalute
+[PARSER] not parsed: helmet
+[PARSER] not parsed: helmetOn
+[PARSER] not parsed: helmetOff
+[PARSER] not parsed: idlingFloating
+[PARSER] not parsed: idlingGravity
+[PARSER] not parsed: dancingGravity
+[PARSER] not parsed: movingJumpingJumpUp
+[PARSER] not parsed: movingJumpingJumpDown
+[PARSER] not parsed: movingFallingStandard
+[PARSER] not parsed: movingFallingLedge
+[PARSER] not parsed: movingLandingShortFall
+[PARSER] not parsed: movingLandingMiddleFall
+[PARSER] not parsed: movingLandingLongFall
+[PARSER] not parsed: movingNoGravityGravToNoGrav
+[PARSER] not parsed: movingNoGravityNoGravToGrav
+[PARSER] not parsed: movingNoGravityFloatMoveN
+[PARSER] not parsed: movingNoGravityFloatMoveS
+[PARSER] not parsed: movingNoGravityFloatMoveUp
+[PARSER] not parsed: movingNoGravityFloatMoveDown
+[PARSER] not parsed: movingNoGravityFloatRot
+[PARSER] not parsed: movingNoGravityFloatHit
+[PARSER] not parsed: movingNoGravityFloatDeath
+[PARSER] not parsed: movingByFootCrawling
+[PARSER] not parsed: movingByFootCrawlingNorth
+[PARSER] not parsed: movingByFootCrawlingSouth
+[PARSER] not parsed: movingByFootCrawlingWest
+[PARSER] not parsed: movingByFootCrawlingEast
+[PARSER] not parsed: movingByFootCrawlingNorthEast
+[PARSER] not parsed: movingByFootCrawlingNorthWest
+[PARSER] not parsed: movingByFootCrawlingSouthWest
+[PARSER] not parsed: movingByFootCrawlingSouthEast
+[PARSER] not parsed: movingByFootSlowWalking
+[PARSER] not parsed: movingByFootSlowWalkingNorth
+[PARSER] not parsed: movingByFootSlowWalkingSouth
+[PARSER] not parsed: movingByFootSlowWalkingWest
+[PARSER] not parsed: movingByFootSlowWalkingEast
+[PARSER] not parsed: movingByFootSlowWalkingNorthEast
+[PARSER] not parsed: movingByFootSlowWalkingNorthWest
+[PARSER] not parsed: movingByFootSlowWalkingSouthWest
+[PARSER] not parsed: movingByFootSlowWalkingSouthEast
+[PARSER] not parsed: movingByFootWalking
+[PARSER] not parsed: movingByFootWalkingNorth
+[PARSER] not parsed: movingByFootWalkingSouth
+[PARSER] not parsed: movingByFootWalkingWest
+[PARSER] not parsed: movingByFootWalkingEast
+[PARSER] not parsed: movingByFootWalkingNorthEast
+[PARSER] not parsed: movingByFootWalkingNorthWest
+[PARSER] not parsed: movingByFootWalkingSouthWest
+[PARSER] not parsed: movingByFootWalkingSouthEast
+[PARSER] not parsed: movingByFootRunning
+[PARSER] not parsed: movingByFootRunningNorth
+[PARSER] not parsed: movingByFootRunningSouth
+[PARSER] not parsed: movingByFootRunningWest
+[PARSER] not parsed: movingByFootRunningEast
+[PARSER] not parsed: movingByFootRunningNorthEast
+[PARSER] not parsed: movingByFootRunningNorthWest
+[PARSER] not parsed: movingByFootRunningSouthWest
+[PARSER] not parsed: movingByFootRunningSouthEast
+[PARSER] not parsed: upperBodyBareHandMelee
+[PARSER] not parsed: upperBodyGun
+[PARSER] not parsed: upperBodyGunIdle
+[PARSER] not parsed: upperBodyGunIdleIn
+[PARSER] not parsed: upperBodyGunDraw
+[PARSER] not parsed: upperBodyGunAway
+[PARSER] not parsed: upperBodyGunFire
+[PARSER] not parsed: upperBodyGunFireHeavy
+[PARSER] not parsed: upperBodyGunMelee
+[PARSER] not parsed: upperBodyFabricator
+[PARSER] not parsed: upperBodyFabricatorIdle
+[PARSER] not parsed: upperBodyFabricatorDraw
+[PARSER] not parsed: upperBodyFabricatorAway
+[PARSER] not parsed: upperBodyFabricatorFire
+[PARSER] not parsed: upperBodyFabricatorPumpAction
+[PARSER] not parsed: attacking
+[PARSER] not parsed: attackingMelee
+[PARSER] not parsed: attackingMeleeFloating
+[PARSER] not parsed: attackingMeleeGravity
+[PARSER] not parsed: death
+[PARSER] not parsed: deathFloating
+[PARSER] not parsed: deathGravity
+[PARSER] not parsed: sitting
+[PARSER] not parsed: sittingBlock
+[PARSER] not parsed: sittingBlockNoFloor
+[PARSER] not parsed: sittingBlockNoFloorIdle
+[PARSER] not parsed: sittingBlockFloor
+[PARSER] not parsed: sittingBlockFloorIdle
+[PARSER] not parsed: sittingWedge
+[PARSER] not parsed: sittingWedgeNoFloor
+[PARSER] not parsed: sittingWedgeNoFloorIdle
+[PARSER] not parsed: sittingWedgeFloor
+[PARSER] not parsed: sittingWedgeFloorIdle
+[PARSER] not parsed: hit
+[PARSER] not parsed: hitSmall
+[PARSER] not parsed: hitSmallFloating
+[PARSER] not parsed: hitSmallGravity
+[PARSER] not parsed: salutes
+[PARSER] not parsed: salutesSalute
+[PARSER] not parsed: talk
+[PARSER] not parsed: talkSalute
+[PARSER] not parsed: helmet
+[PARSER] not parsed: helmetOn
+[PARSER] not parsed: helmetOff
+[PARSER] not parsed: movingFallingStandard
+[PARSER] not parsed: movingFallingLedge
+[PARSER] not parsed: movingLandingShortFall
+[PARSER] not parsed: movingLandingMiddleFall
+[PARSER] not parsed: movingLandingLongFall
+[PARSER] not parsed: upperBodyBareHandMelee
+[PARSER] not parsed: upperBodyGun
+[PARSER] not parsed: upperBodyGunIdle
+[PARSER] not parsed: upperBodyGunIdleIn
+[PARSER] not parsed: upperBodyGunDraw
+[PARSER] not parsed: upperBodyGunAway
+[PARSER] not parsed: upperBodyGunFire
+[PARSER] not parsed: upperBodyGunFireHeavy
+[PARSER] not parsed: upperBodyGunMelee
+[PARSER] not parsed: upperBodyFabricator
+[PARSER] not parsed: upperBodyFabricatorIdle
+[PARSER] not parsed: upperBodyFabricatorDraw
+[PARSER] not parsed: upperBodyFabricatorAway
+[PARSER] not parsed: upperBodyFabricatorFire
+[PARSER] not parsed: upperBodyFabricatorPumpAction
+[PARSER] not parsed: attacking
+[PARSER] not parsed: attackingMelee
+[PARSER] not parsed: attackingMeleeFloating
+[PARSER] not parsed: attackingMeleeGravity
+[PARSER] not parsed: death
+[PARSER] not parsed: deathFloating
+[PARSER] not parsed: deathGravity
+[PARSER] not parsed: sitting
+[PARSER] not parsed: sittingBlock
+[PARSER] not parsed: sittingBlockNoFloor
+[PARSER] not parsed: sittingBlockNoFloorIdle
+[PARSER] not parsed: sittingBlockFloor
+[PARSER] not parsed: sittingBlockFloorIdle
+[PARSER] not parsed: sittingWedge
+[PARSER] not parsed: sittingWedgeNoFloor
+[PARSER] not parsed: sittingWedgeNoFloorIdle
+[PARSER] not parsed: sittingWedgeFloor
+[PARSER] not parsed: sittingWedgeFloorIdle
+[PARSER] not parsed: hit
+[PARSER] not parsed: hitSmall
+[PARSER] not parsed: hitSmallFloating
+[PARSER] not parsed: hitSmallGravity
+[PARSER] not parsed: salutes
+[PARSER] not parsed: salutesSalute
+[PARSER] not parsed: talk
+[PARSER] not parsed: talkSalute
+[PARSER] not parsed: helmet
+[PARSER] not parsed: helmetOn
+[PARSER] not parsed: helmetOff
+[SERVER][NPCFACTIONS] Using Faction Config File E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\server-database\freeplay\npcFactions\Outcasts\npcConfig.xml
+[SERVER] ###### READING ALL BLUEPRINTS!
+[SERVER] ###### READING ALL 14 BLUEPRINTS FINISHED! TOOK 164ms
+[SERVER][NPCFACTIONS] Using Faction Config File E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\server-database\freeplay\npcFactions\Scavengers\npcConfig.xml
+[SERVER] ###### READING ALL BLUEPRINTS!
+[SERVER] ###### READING ALL 19 BLUEPRINTS FINISHED! TOOK 60ms
+[SERVER][NPCFACTIONS] Using Faction Config File E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\server-database\freeplay\npcFactions\testingFaction\npcConfig.xml
+[SERVER] ###### READING ALL BLUEPRINTS!
+[SERVER] ###### READING ALL 21 BLUEPRINTS FINISHED! TOOK 103ms
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth Type-Zero Bb; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth Type-Zero Cp; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth Type-Zero Bm; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth Type-Zero M-; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth Type-Zero Cb; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth Type-Zero Mp; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth Type-Zero Mc; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth Type-Zero Cm; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth Type-Zero Cc; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth-VI; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth Type-Zero Bc; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth Type-Zero Mb; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth Type-Zero Bp; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth Type-Zero B-; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth Type-Zero C-; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Isanth Type-Zero Mm; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Piratestation Delta; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Piratestation Eta; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Piratestation Alpha; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Piratestation Beta; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+org.schema.game.server.data.simulation.npc.geo.NPCBlueprintVersionException: WARNING for NPC preset testingFaction: Old blueprint version detected: Piratestation Gamma; Please load the blueprint and resave it for NPC use!
+	at obfuscated.aAi.b(SourceFile:117)
+	at obfuscated.azq.a(SourceFile:70)
+	at obfuscated.aiw.<init>(SourceFile:174)
+	at obfuscated.abx.<init>(SourceFile:196)
+	at org.schema.game.server.controller.GameServerController.initializeServerState(SourceFile:1695)
+	at org.schema.schine.network.server.ServerController.startServerAndListen(SourceFile:369)
+	at obfuscated.WL.run(SourceFile:1560)
+	at java.lang.Thread.run(Unknown Source)
+[SERVER][NPCFACTIONS] Using Faction Config File E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\server-database\freeplay\npcFactions\testingFactionTwo\npcConfig.xml
+[SERVER] ###### READING ALL BLUEPRINTS!
+[SERVER] ###### READING ALL 5 BLUEPRINTS FINISHED! TOOK 8ms
+[SERVER][NPCFACTIONS] Using Faction Config File E:\SteamLibrary\steamapps\common\StarMade\StarMade\.\server-database\freeplay\npcFactions\Trading Guild\npcConfig.xml
+[SERVER] ###### READING ALL BLUEPRINTS!
+[SERVER] ###### READING ALL 13 BLUEPRINTS FINISHED! TOOK 268ms
+[TAG] WARNING STRUCT DESERIALIZATION took too long: 158; 
+[TAG] WARNING: Struct read time of FN took: 158
+[TAG] WARNING STRUCT DESERIALIZATION took too long: 100; 
+[TAG] WARNING: Struct read time of msg took: 432
+[TAG] WARNING STRUCT DESERIALIZATION took too long: 441; 
+[TAG] WARNING: Struct read time of fp-v0 took: 441
+[TAG] WARNING STRUCT DESERIALIZATION took too long: 648; 
+[TAG] WARNING: Struct read time of FN took: 648
+[TAG] WARNING STRUCT DESERIALIZATION took too long: 906; 
+[TAG] WARNING: Struct read time of NStruct took: 906
+[TAG] WARNING STRUCT DESERIALIZATION took too long: 917; 
+[TAG] warning: reading tag: factions-v2 took: 917
+[SERVER][FACTION] LOADED NPC INV: Faction [id=-9999998, name=Scavengers, description=The Scavengers are a violent people. They care only for themselves, and are willing to do whatever it takes to achieve their goals. Space is a bleak place, and it has driven them to the extremes.Their unwillingness to work with others leaves them at a disadvantage. As a result, the Scavengers are fairly weak. They are little more than a nuisance to many other factions., size: 0; FP: 100] Inventory: (Type8; Param -9999998; SlotCount: 209)
+[SERVER][FACTION] LOADED NPC INV: Faction [id=-9999999, name=Outcasts, description=The Outcasts is a loose organization comprised of many different aliens species. The harshness of space has left these people without a home, and so they rely on each to survive. The Outcasts are not particularly strong, buttreat outsiders with justifiable wariness. The Outcasts are spread thin across the stars and seek to avoid the attention of others., size: 0; FP: 100] Inventory: (Type8; Param -9999999; SlotCount: 253)
+[SERVER][FACTION] LOADED NPC INV: Faction [id=-10000000, name=Traders, description=The Trading Guild is a collection of large corporations. They work to better themselves primarily through trade and economics.The Trading Guild treats others with neutrality, and they hardly care who or what they sell their products to. Their wealth grants them strength, but they are a relatively peaceful faction., size: 0; FP: 100] Inventory: (Type8; Param -10000000; SlotCount: 233)
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999999, b=-1002, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999999, b=10000, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999998, b=-1005, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-10000000, b=-1004, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-10000000, b=-1007, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-10000000, b=-1005, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999999, b=-1006, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999998, b=-1007, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-10000000, b=-1006, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999999, b=-1, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999999, b=-1005, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999998, b=-1002, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-10000000, b=-1002, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999999, b=-1001, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999998, b=-1004, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999998, b=-1003, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999999, b=-1000, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-10000000, b=-1001, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-10000000, b=-1, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999998, b=-1006, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999998, b=-1001, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999999, b=-1007, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999998, b=-1, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-10000000, b=-1003, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999999, b=-1003, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999999, b=-1004, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-10000000, b=-1000, rel=NEUTRAL]
+[SERVER][FACION][TAG] loaded relation offer RelOffer[a=-9999998, b=-1000, rel=NEUTRAL]
+[SERVER][CATALOG] READ RAW BLUEPRINTS: 19
+[SIM] loading simulation group type: 0: SimulationGroup[NULL_PROGRAM]
+
+[SIM] loading simulation group type: 0: SimulationGroup[NULL_PROGRAM]
+
+[SIM] loading simulation group type: 0: SimulationGroup[NULL_PROGRAM]
+
+[ServerListener] Server initialization OK... now waiting for connections
+[SERVERCONTROLLER][INIT] (listenerId[0]) SERVER STARTED UPDATING
+[SERVER] SERVER INIT FINISHED
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER][UPDATE] WARNING: handleQueuedSynchronizedObjects update took 55 on Server(0)
+[FACTIONMANAGER] MAKING FACTION TURN: Sun Apr 16 20:26:09 CEST 2017; 22; Turn: 60.0
+[FACTIONMANAGER] faction update took: 109ms
+[SERVER][UPDATE] WARNING: object local update of SenableGameState(1) took 180
+[SERVER][UPDATE] WARNING: object local update of 2 objects took 180
+[NT] Big FullUpdate: 55923 bytes: SenableGameState(1)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
+[SERVER-LOCAL-ADMIN] END; ERROR: command not regognize (use /chat to broadcast)
