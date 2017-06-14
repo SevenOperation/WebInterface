@@ -20,8 +20,9 @@ echo $user["password"];
 if ($login == true) {
   $_SESSION['angemeldet' . $_POST['username']] = true;
   setcookie('user', $_POST['username'], 0 , "/" );
+  setcookie('benutzerdaten', $_POST['username'] . "-" . $_POST["password"], 0 , "/" );
   header('Location: controlinterface.php');
 } else {
-  header('Location: webinterface.php');
+  header('Location: /index.php');
 }
 ?>

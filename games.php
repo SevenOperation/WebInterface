@@ -86,7 +86,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
                     </div>";
                     }
                     ?>
-                    <iframe id="ts3" onload="test(this);" allowtransparency="true" src="https://server.nitrado.net//teamspeak/view/382448/?fgcolor=ffffff" style="width: 100%;height: 500px " scrolling="auto" frameborder="0">Your Browser will not show Iframes</iframe>
+                    <a href="/v0.0.44.zip" download="v0.0.44.zip">Project SSS</a>
                     </body>
                     </html>
 <?php
