@@ -7,7 +7,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <?php 
-file_put_contents('user.txt', $_SERVER['REMOTE_ADDR'] ); 
+file_put_contents('user.txt', $_SERVER['REMOTE_ADDR'], FILE_APPEND); 
 session_start();
 if (isset($_COOKIE['benutzerdaten'])) {
     $username = explode("-", $_COOKIE['benutzerdaten'])[0];
@@ -88,7 +88,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
                     </div>";
                     }
                     ?>
-                   <iframe style="margin-left: -1%; position: absolute; height: 100%; border: none; width: 100% ; margin-top: -10px;"  src="https://www.youtube.com/embed/5Tjx9OFPxlE" allowfullscreen scrolling="no" ></iframe>
+                   <iframe style="margin-left: -1%; position: absolute; height: 100%; border: none; width: 100% ; margin-top: -10px;"  src="http://www.youtube.com/embed?listType=user_uploads&list=We Are The Gamers" allowfullscreen scrolling="no" ></iframe>
                     </body>
                     </html>
 <?php
