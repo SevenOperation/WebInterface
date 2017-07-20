@@ -12,7 +12,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
 
 
 <!DOCTYPE html>
-<html>
+<!--<html>
     <head>
         <meta charset='UTF-8'>
         <title>Herzlich Wilkommen bei WeAreTheGamers</title>
@@ -51,7 +51,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
                     <li><a href=''>Games</a></li>
                     <li><a href=''>Ankündigungen</a></li>
                     <?php
-                    if (isset($_COOKIE['benutzerdaten']) && isset($_SESSION["angemeldet" . $username]) && $_SESSION["angemeldet" . $username] == true) {
+                    /*if (isset($_COOKIE['benutzerdaten']) && isset($_SESSION["angemeldet" . $username]) && $_SESSION["angemeldet" . $username] == true) {
                         echo "</ul><ul style='margin: 0; list-style: none; float: right;'>
                     <li style='float: left'><a class='einloggenCss' onclick='userMenue()'>" . $username . "</a></li>
                     </ul></div></div>";
@@ -83,7 +83,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
                             </p>
                         </form>
                     </div>";
-                    }
+                    }*/
                     ?>
                     <div style='width: 100px;  background-color: #24292e; padding-top: 12px; padding-bottom: 12px; line-height: 1.5 ;'>
                     <div class='head' style='height: 600px; margin-left: auto; margin-right: auto; line-height: 1.5; font-size: 14px'>
@@ -95,7 +95,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
                     </div>
                     </div>
                     </body>
-                    </html>
+                    </html>-->
 <html>
     <head>
         <link rel="stylesheet" href="css.css">

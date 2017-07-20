@@ -11,8 +11,8 @@ if (!isset($_SESSION['angemeldet' . $_COOKIE['user']]) || $_SESSION['angemeldet'
     </head>
     <body>
         <?php 
-        //$a = array("StarMade" , "7DaysToDie");
-        //file_put_contents("games.txt", serialize($a));
+        $a = array("StarMade" , "7DaysToDie","Minecraft");
+        file_put_contents("games.txt", serialize($a));
         $spiele = unserialize(file_get_contents("games.txt"));
         foreach ($spiele as $spiel){
             echo'<button onclick="selectGame(\'' . $spiel . '\')">'. $spiel .'</button>';
