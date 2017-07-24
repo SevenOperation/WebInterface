@@ -6,7 +6,7 @@
     </head>
     <body>
          <div align="center" class="top" >
-            <img src="logo.png" alt="Logo" style="width: 100px; height: 100px"/>
+             <img src="Logo7Industries.png" alt="Logo" style="width: 194px; height: 110px"/>
         </div>
     </body>
 </html>

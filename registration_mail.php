@@ -1,6 +1,8 @@
 <!Doctype html>
 <html>
-    <head></head>
+    <head>
+        <title>test</title>
+    </head>
     <body>
         <input type="text" required />
         <input type="text" required />

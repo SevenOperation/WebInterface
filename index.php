@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <?php 
-file_put_contents('user.txt', $_SERVER['REMOTE_ADDR'], FILE_APPEND ); 
+include_once './logs/logger.php';
+logIP();
 session_start();
 if (isset($_COOKIE['benutzerdaten'])) {
     $username = explode("-", $_COOKIE['benutzerdaten'])[0];
@@ -85,15 +81,6 @@ if (isset($_COOKIE['benutzerdaten'])) {
                         </form>
                     </div>";
                     }
-                    ?>
-                    <iframe id="ts3" onload="test(this);" allowtransparency="true" src="https://server.nitrado.net//teamspeak/view/382448/?fgcolor=ffffff" style="width: 100%;height: 500px " scrolling="auto" frameborder="0">Your Browser will not show Iframes</iframe>
-                    </body>
-                    </html>
-<?php
- 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+                    echo " <iframe id='ts3' allowtransparency='true' src='https://server.nitrado.net//teamspeak/view/382448/?fgcolor=ffffff' style='width: 100%;height: 500px ' scrolling='auto' frameborder='0'>Your Browser will not show Iframes</iframe>
+                        </body>
+                    </html>";

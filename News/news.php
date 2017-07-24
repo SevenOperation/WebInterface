@@ -7,14 +7,14 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <?php 
-file_put_contents('user.txt', $_SERVER['REMOTE_ADDR'], FILE_APPEND); 
 session_start();
 if (isset($_COOKIE['benutzerdaten'])) {
     $username = explode("-", $_COOKIE['benutzerdaten'])[0];
     $password = explode("-", $_COOKIE['benutzerdaten'])[1];
 }
 ?>
-<!DOCTYPE html>
+
+
 <html>
     <head>
         <meta charset='UTF-8'>

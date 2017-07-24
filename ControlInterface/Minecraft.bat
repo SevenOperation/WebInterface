@@ -1,1 +1,0 @@
-"Minecraft" java -server -Xms4096M -Xmx4096M -XX:PermSize=512M -XX:+UseG1GC -XX:+CMSIncrementalPacing -XX:+CMSClassUnloadingEnabled -XX:ParallelGCThreads=4 -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -jar FTBServer-1.7.10-1614.jar nogui

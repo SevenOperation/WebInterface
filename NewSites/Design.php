@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 session_start();
 if (isset($_COOKIE['benutzerdaten'])) {
@@ -5,7 +6,6 @@ if (isset($_COOKIE['benutzerdaten'])) {
     $password = explode("-", $_COOKIE['benutzerdaten'])[1];
 }
 ?>
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset='UTF-8'>
