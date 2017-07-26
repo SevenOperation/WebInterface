@@ -9,6 +9,10 @@
 	content: "";
 	display: table;
 }
+.nav{
+    float:none;
+      list-style: none;
+}
 .banner{
 	
 	}
@@ -64,4 +68,23 @@ li{
 }
 .table{
 	float: right;
+}
+.nav-title{
+    color: white;
+   
+}
+
+.nav-header{
+    background-color: #24292e;
+    width:  200px;
+    position:absolute ;
+    left: 0px;
+    top: initial;
+    height: 100%
+    
+}
+.navigation{
+  
+    background-color: black;
+    text-decoration: none;
 }
