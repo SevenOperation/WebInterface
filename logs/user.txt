@@ -42,3 +42,6 @@ IP: 180.76.15.150 | OS: Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.ba
 IP: 163.172.4.153 | OS: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36 | Datum: 27.10.2017 | Zeit: 05:50:16am
 IP: 192.36.27.4 | OS: AfD-Verbotsverfahren JETZT! | Datum: 27.10.2017 | Zeit: 06:47:49am
 IP: 79.202.37.152 | OS:  | Datum: 27.10.2017 | Zeit: 07:59:54am
+IP: 195.178.101.67 | OS: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0 | Datum: 27.10.2017 | Zeit: 09:38:32am
+IP: 195.178.101.67 | OS: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0 | Datum: 27.10.2017 | Zeit: 09:40:32am
+IP: 195.178.101.67 | OS: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0 | Datum: 27.10.2017 | Zeit: 09:40:47am
