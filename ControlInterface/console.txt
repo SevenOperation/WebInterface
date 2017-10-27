@@ -2687,3 +2687,14 @@ Attemping to load JABBA data.
 [23:29:12] [Thread-45/INFO] [FTBU Backups]: Created C:\Users\SevenOperation\Downloads\FTBInfinityServer_2.7.0\.\backups\2017-07-26-23-28-45\backup.zip from C:\Users\SevenOperation\Downloads\FTBInfinityServer_2.7.0\.\world
 [23:29:12] [Thread-45/INFO]: Server backup done in 00:00:26! (569.7MB | 3.6GB)
 [23:29:12] [Server thread/INFO]: Turned on world auto-saving
+[21:29:24] [Server thread/INFO]: Server Backup started!
+[21:29:25] [Server thread/INFO] [FastCraft]: The server is lagging 72322564 ms behind, 1445451 ticks will be skipped.
+[23:29:25] [Server thread/INFO]: Server Backup started!
+[01:29:25] [Server thread/INFO]: Server Backup started!
+[14:31:15] [Server thread/INFO]: Server Backup started!
+[14:31:16] [Server thread/INFO] [FastCraft]: The server is lagging 42572625 ms behind, 850452 ticks will be skipped.
+[16:31:16] [Server thread/INFO]: Server Backup started!
+[18:31:16] [Server thread/INFO]: Server Backup started!
+[20:31:16] [Server thread/INFO]: Server Backup started!
+[22:31:16] [Server thread/INFO]: Server Backup started!
+[00:31:16] [Server thread/INFO]: Server Backup started!

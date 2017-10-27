@@ -39,14 +39,14 @@ if (isset($_COOKIE['benutzerdaten'])) {
             }
         </script>
     </head>
-    <body style='background-image: url(/logo_1.png);  background-size: cover;'>
+    <body style='background-image: url(/Logo_1.png);  background-size: cover;'>
         <div style='background-color: #24292e; padding-top: 12px; padding-bottom: 12px; line-height: 1.5 ;'>
             <div class='head' style='width: 960px; margin-left: auto; margin-right: auto; line-height: 1.5; font-size: 14px'>
                 <ul style='margin-top: 0; list-style: none; float: left; padding-left: 0; margin-bottom: 0'>
                     <li><a href='/index.php'>Startseite</a></li>
                     <li><a href='/News/news.php'>News</a></li>
                     <li><a href=''>Games</a></li>
-                    <li><a href=''>Ankündigungen</a></li>
+                    <li><a href='/Announcements/announcement.php'>Ankündigungen</a></li>
                     <?php
                     if (isset($_COOKIE['benutzerdaten']) && isset($_SESSION["angemeldet" . $username]) && $_SESSION["angemeldet" . $username] == true) {
                         echo "</ul><ul style='margin: 0; list-style: none; float: right;'>
@@ -84,3 +84,4 @@ if (isset($_COOKIE['benutzerdaten'])) {
                     echo " <iframe id='ts3' allowtransparency='true' src='https://server.nitrado.net//teamspeak/view/382448/?fgcolor=ffffff' style='width: 100%;height: 500px ' scrolling='auto' frameborder='0'>Your Browser will not show Iframes</iframe>
                         </body>
                     </html>";
+?>
