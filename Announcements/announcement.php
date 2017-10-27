@@ -12,8 +12,9 @@ $db = new PDO('mysql:host=localhost;dbname=news', 'root', '');
 $announcements = $db->query("Select titel , content from announcement");
 if(isset($announcements)){
 foreach( $announcements as $announcement ){
- echo "<div style='padding-top: 2%; padding-bottom: 2%; margin: auto; width: 25%'><div style='background-color: white'><p style='width: 100%; text-align: center'>".$announcement['titel']."</p></div>".
-      "<div style='background-color: white; height: 500px;'><p style='width: 100%;'>".nl2br($announcement['content'])."</p></div></div>";
+ echo "<div style='padding: 1%; background-color: darkblue'><div style='padding-top: 2%; padding-bottom: 2%; margin: auto; width: 25%'>".
+      "<div style='background-color: white'><p style='width: 100%; text-align: center'>".$announcement['titel']."</p></div>".
+      "<div style='background-color: white; height: 500px;'><p style='width: 100%;'>".nl2br($announcement['content'])."</p></div></div></div>";
 }
 }
 ?>
