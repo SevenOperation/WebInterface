@@ -45,3 +45,4 @@ IP: 79.202.37.152 | OS:  | Datum: 27.10.2017 | Zeit: 07:59:54am
 IP: 195.178.101.67 | OS: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0 | Datum: 27.10.2017 | Zeit: 09:38:32am
 IP: 195.178.101.67 | OS: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0 | Datum: 27.10.2017 | Zeit: 09:40:32am
 IP: 195.178.101.67 | OS: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0 | Datum: 27.10.2017 | Zeit: 09:40:47am
+IP: 185.100.86.167 | OS: AfD-Verbotsverfahren JETZT! | Datum: 27.10.2017 | Zeit: 10:13:28am
