@@ -9,9 +9,9 @@ if (isset($_COOKIE['benutzerdaten'])) {
     $password = explode("-", $_COOKIE['benutzerdaten'])[1];
 }
  getNormalHeader();
-   getNormalBodyTop($username);
+ getBodySSSZBild($username);
  ?>
-<a   href="../v0.0.68,4" download="Space Survivors Shooter">Download Space Survivors Shooter</a>
+
                     
                     </body>
                     </html>
