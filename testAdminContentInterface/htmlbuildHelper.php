@@ -59,7 +59,24 @@ echo "<body style='background-image: url(/Logo_1.png);  background-size: cotain;
                         echo "</ul><ul style='margin: 0; list-style: none; float: right;'>
                     <li style='float: left'><a class='einloggenCss' onclick='userMenue()'>Einloggen</a></li>
                     <li style='float: left'><a class='einloggenCss' onclick='registerUser()'>Registrieren</a></li>
-                    </ul></div></div>";
+                    </ul></div><div style='width: 960px; margin-left: auto; margin-right: auto;'>
+                        <div id='login' style='width: 340px;' class='drop2' align='center'>
+                            <form action='/ControlInterface/datenueberpruefung.php' method='post'>
+                                <p><input class='input' id='username' name='username' type='text' placeholder='Username'/></p>
+                                <p><input class='input' id='password' name='password' type='password' placeholder='Password'/></p>
+                                <p><button type='submit'>Einloggen</button></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div id='register' style='width: 340px;' class='drop2' align='center'>
+                        <form action='/ControlInterface/registrieren_datenueberpruefung.php' method='post'>
+                            <p><input class='input' id='username' name='username' type='text' placeholder='Username'/></p>
+                            <p><input class='input' id='password' name='password' type='password' placeholder='Password'/></p>
+                            <p><input class='input' id='passwordw' name='passwordw' type='password' placeholder='Password Wiederholen' required='required'/></p>
+                            <p><button type='submit'>Registrieren</button>
+                            </p>
+                        </form>
+                    </div></div>";
                         echo "<div style='width: 960px; margin-left: auto; margin-right: auto;'>
                         <div id='login' style='width: 340px;' class='drop2' align='center'>
                             <form action='/ControlInterface/datenueberpruefung.php' method='post'>
