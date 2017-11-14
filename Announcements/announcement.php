@@ -11,6 +11,7 @@ $extrascipt = "\r\n function showComments(id){".
      "\r\n request.onreadystatechange = function() {" .
         "\r\n if (request.readyState == 4 && request.status == 200)".
             "\r\n document.getElementById(id).innerhtml = request.responseXML;".
+            "\r\n alert(request.responseXML)".
     "\r\n }".
     "\r\n ".
     "\r\n request.open('GET', 'getComments.php?id=' + id, true);".
