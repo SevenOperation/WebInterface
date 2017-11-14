@@ -15,7 +15,7 @@ $extrascipt = "\r\n function showComments(id){".
     "\r\n }".
     "\r\n ".
     "\r\n request.open('GET', 'getComments.php?id=' + id, true);".
-    "\r\n request.send(null);".
+    "\r\n request.send('');".
     "\r\n }";
 getHeaderExtraScript($extrascipt);
 getNormalBodyTop($username);
