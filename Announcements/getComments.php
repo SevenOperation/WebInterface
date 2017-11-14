@@ -1,4 +1,6 @@
-
+<!DOCTYPE html>
+<head></head>
+<body>
 <?php
 if(isset($_GET['id'])){
     $db = new PDO('mysql:host=localhost;dbname=news', 'root', '');
@@ -13,4 +15,5 @@ if(isset($_GET['id'])){
 }else{
         echo "<p>No Comments could be found</p>";
     }
-
+?>
+</body>
