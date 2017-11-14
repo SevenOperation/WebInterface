@@ -5,7 +5,7 @@ if(isset($_GET['id'])){
     $comments = $db->query("Select * from comments WHERE annoucementID=". $_GET['id'] ." ORDER BY id DESC");
     if(isset($comments)){
     foreach ($comments as $comment){
-        echo "<texarea>".$comment['created']."</textarea>";
+        echo "<textarea>".$comment['created']."</textarea>";
     }
     }else{
         echo "<p>No Comments could be found</p>";
