@@ -8,7 +8,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
 }
 $extrascipt = "<script type='text/javascript'>".
 "function showComments(id){".
-    "var request = new XMLHttpRequest()".
+    "var request = new XMLHttpRequest();".
      "request.onreadystatechange = function() {" .
         "if (request.readyState == 4 && request.status == 200)".
             "callback(request.responseText);".
