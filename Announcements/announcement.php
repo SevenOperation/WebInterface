@@ -9,7 +9,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
 getNormalHeader();
 getNormalBodyTop($username);
 $db = new PDO('mysql:host=localhost;dbname=news', 'root', '');
-$announcements = $db->query("Select titel , content from announcement");
+$announcements = $db->query("Select titel , content from announcement ORDER BY id DESC");
 if(isset($announcements)){
 foreach( $announcements as $announcement ){
  echo "<div style='width: 52%; padding: 2%; margin: auto'><div style='padding: 2%; margin: auto; width: 100%; background-color: darkblue'>".
