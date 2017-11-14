@@ -8,7 +8,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
 getNormalHeader();
 getNormalBodyTop($username);
 ?>
-<div style='padding-top: 2%; padding-bottom: 2%; margin: auto; width: 29%; padding-left: 2%; padding-right: 2% '>
+<div style='padding-top: 2%; padding-bottom: 2%; margin: auto; width: 52%; padding-left: 2%; padding-right: 2% '>
 <div style="background-color: darkblue; padding-top: 1%; padding-right: 2%; padding-left: 2%; padding-bottom: 2%">
 <form action='' method='POST'>
 <div style='background-color: white;'>
