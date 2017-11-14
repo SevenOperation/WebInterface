@@ -10,7 +10,7 @@ $extrascipt = "\r\n function showComments(id){".
     "\r\n var request = new XMLHttpRequest();".
      "\r\n request.onreadystatechange = function() {" .
         "\r\n if (request.readyState == 4 && request.status == 200)".
-            "\r\n document.getElementById(id).innerhtml = request.responseText;".
+            "\r\n document.getElementById(id).innerhtml += request.responseText;".
             "\r\n alert(request.responseText)".
     "\r\n }".
     "\r\n ".
