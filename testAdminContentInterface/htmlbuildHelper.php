@@ -37,6 +37,47 @@ echo "<html>" .
        " </script>".
     "</head>";
 }
+
+function getHeaderExtraScript($extrascipt){
+echo '<!DOCTYPE html>';
+session_start();
+if (isset($_COOKIE['benutzerdaten'])) {
+    $username = explode("-", $_COOKIE['benutzerdaten'])[0];
+    $password = explode("-", $_COOKIE['benutzerdaten'])[1];
+}
+echo "<html>" .
+    "<head>" .
+        "<meta charset='UTF-8'>".
+        "<title>Herzlich Wilkommen bei WeAreTheGamers</title>".
+        "<link rel='stylesheet' href='Style.css'>".
+        "<script type='text/javascript'>".
+            "function userMenue() {".
+                "if (document.getElementById('register')) {".
+                "    document.getElementById('register').classList.remove('show');".
+                "}".
+                "document.getElementById('login').classList.toggle('show');".
+            "}".
+            "function registerUser() {".
+            "    document.getElementById('login').classList.remove('show');".
+            "    document.getElementById('register').classList.toggle('show');".
+            "}".
+            "window.onclick = function (event) {".
+            "    if (!event.target.matches('.input') && !event.target.matches('.einloggenCss')) {".
+            "        var dropdowns = document.getElementsByClassName('drop2');".
+            "        var i;".
+            "        for (i = 0; i < dropdowns.length; i++) {".
+            "            var openDropdown = dropdowns[i];".
+            "            if (openDropdown.classList.contains('show')) {".
+            "                openDropdown.classList.remove('show');".
+            "            }".
+            "        }".
+            "    }".
+            "}".
+       " </script>".
+        $extrascipt.
+    "</head>";
+}
+
 function getNormalBodyTop($username){
 echo "<body style='background-image: url(/Logo_1.png);  background-size: cotain;'>".
         "<div style='background-color: #24292e; padding-top: 12px; padding-bottom: 12px; line-height: 1.5 ;'>".
@@ -77,6 +118,24 @@ echo "<body style='background-image: url(/Logo_1.png);  background-size: cotain;
                             </p>
                         </form>
                     </div></div>";
+                        echo "<div style='width: 960px; margin-left: auto; margin-right: auto;'>
+                        <div id='login' style='width: 340px;' class='drop2' align='center'>
+                            <form action='/ControlInterface/datenueberpruefung.php' method='post'>
+                                <p><input class='input' id='username' name='username' type='text' placeholder='Username'/></p>
+                                <p><input class='input' id='password' name='password' type='password' placeholder='Password'/></p>
+                                <p><button type='submit'>Einloggen</button></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div id='register' style='width: 340px;' class='drop2' align='center'>
+                        <form action='/ControlInterface/registrieren_datenueberpruefung.php' method='post'>
+                            <p><input class='input' id='username' name='username' type='text' placeholder='Username'/></p>
+                            <p><input class='input' id='password' name='password' type='password' placeholder='Password'/></p>
+                            <p><input class='input' id='passwordw' name='passwordw' type='password' placeholder='Password Wiederholen' required='required'/></p>
+                            <p><button type='submit'>Registrieren</button>
+                            </p>
+                        </form>
+                    </div>";
                     }
 }
 
