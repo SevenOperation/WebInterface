@@ -6,8 +6,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
     $username = explode("-", $_COOKIE['benutzerdaten'])[0];
     $password = explode("-", $_COOKIE['benutzerdaten'])[1];
 }
-$extrascipt = "<script type='text/javascript'>".
-"function showComments(id){".
+$extrascipt = "function showComments(id){".
     "var request = new XMLHttpRequest();".
      "request.onreadystatechange = function() {" .
         "if (request.readyState == 4 && request.status == 200)".
@@ -15,8 +14,7 @@ $extrascipt = "<script type='text/javascript'>".
     "}".
     "request.open('GET', 'getComments.php?id=' + id, true);".
     "request.send(null);".
-    "}".
-"</script>";
+    "}";
 getHeaderExtraScript($extrascipt);
 getNormalBodyTop($username);
 $db = new PDO('mysql:host=localhost;dbname=news', 'root', '');

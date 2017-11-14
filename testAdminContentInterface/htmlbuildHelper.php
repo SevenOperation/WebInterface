@@ -73,8 +73,9 @@ echo "<html>" .
             "        }".
             "    }".
             "}".
-       " </script>".
         $extrascipt.
+       " </script>".
+        
     "</head>";
 }
 
