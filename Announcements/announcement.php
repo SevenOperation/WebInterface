@@ -6,7 +6,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
     $username = explode("-", $_COOKIE['benutzerdaten'])[0];
     $password = explode("-", $_COOKIE['benutzerdaten'])[1];
 }
-$extrascipt = "function showComments(id){".
+$extrascipt = "\r\nfunction showComments(id){".
     "var request = new XMLHttpRequest();".
      "request.onreadystatechange = function() {" .
         "if (request.readyState == 4 && request.status == 200)".
