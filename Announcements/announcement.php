@@ -21,7 +21,7 @@ $db = new PDO('mysql:host=localhost;dbname=news', 'root', '');
 $announcements = $db->query("Select * from announcement ORDER BY id DESC");
 if(isset($announcements)){
 foreach( $announcements as $announcement ){
- echo "<div style='width: 52%; padding: 2%; margin: auto'><div style='padding: 2%; margin: auto; width: 100%; background-color: darkblue'>".
+ echo "<div id='".$announcement['id']."' style='width: 52%; padding: 2%; margin: auto'><div style='padding: 2%; margin: auto; width: 100%; background-color: darkblue'>".
       "<div style='background-color: white'><p style='width: 100%; text-align: center'>".$announcement['titel']."</p></div>".
       "<div style='background-color: white;'><p style='width: 100%;'>".nl2br($announcement['content'])."</p></div>";
  echo "<button name='".$announcement['id']."' onclick='showComments(".$announcement['id'].")'>Show Comments</button></div></div>";
