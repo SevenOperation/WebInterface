@@ -40,7 +40,7 @@ echo "<html>" .
 function getNormalBodyTop($username){
 echo "<body style='background-image: url(/Logo_1.png);  background-size: cotain;'>".
         "<div style='background-color: #24292e; padding-top: 12px; padding-bottom: 12px; line-height: 1.5 ;'>".
-            "<div class='head' style='width: 960px; margin-left: auto; margin-right: auto; line-height: 1.5; font-size: 14px'>".
+            "<div class='head' style='width: 82%; margin-left: auto; margin-right: auto; line-height: 1.5; font-size: 14px'>".
                 "<ul style='margin-top: 0; list-style: none; float: left; padding-left: 0; margin-bottom: 0'>".
                     "<li><a href='/index.php'>Startseite</a></li>".
                     "<li><a href='/News/news.php'>News</a></li>".
