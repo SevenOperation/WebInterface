@@ -43,12 +43,12 @@ foreach( $announcements as $announcement ){
  echo "<div style='width: 52%; padding: 2%; margin: auto'><div id='".$announcement['id']."' style='padding: 2%; margin: auto; width: 100%; background-color: darkblue'>".
       "<div  style='background-color: white'><p style='width: 100%; text-align: center'>".$announcement['titel']."</p></div>".
       "<div style='background-color: white;'><p style='width: 100%;'>".nl2br($announcement['content'])."</p></div>";
- echo "<button name='".$announcement['id']."' onclick='showComments(".$announcement['id'].")'>Show Comments</button>".
+ echo "<button name='".$announcement['id']."' onclick='showComments(".$announcement['id'].");'>Show Comments</button>".
       "<div style='background-color: white'>".
       "<p>Comment:</p>".
       "<textarea id='CC".$announcement['id']."' maxlength='100' name='content' style='width: 100%; margin: auto; box-sizing: border-box'>".
       "</textarea>".
-      "<button onclick='createComment(CC".$announcement["id"].",".$announcement['id'].")' >Add comment</button>".
+      "<button onclick='createComment(CC".$announcement["id"].",".$announcement['id'].");' >Add comment</button>".
       "</div>".
       "</div></div>";
 }
