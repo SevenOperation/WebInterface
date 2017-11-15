@@ -23,8 +23,9 @@ $extrascipt = "\r\n function showComments(id){".
     "\r\n request.open('GET', 'getComments.php?id=' + id, true);".
     "\r\n request.send('');".
     "\r\n }\r\n} ".
-    "\r\n function createComment(idCC , id){".
-    "\r\n alert(idCC.value + ' ' + id);".
+    "\r\n function createComment(id){".
+    "\r\n alert(id);".
+    "\r\n var idCC = document.getElementById('CC'+id);".
     "\r\n var request = new XMLHttpRequest();".
     "\r\n request.onreadystatechange = function() {".
     "\r\n if (request.readyState == 4 && request.status == 200){".
@@ -48,7 +49,7 @@ foreach( $announcements as $announcement ){
       "<p>Comment:</p>".
       "<textarea id='CC".$announcement['id']."' maxlength='100' name='content' style='width: 100%; margin: auto; box-sizing: border-box'>".
       "</textarea>".
-      "<button onclick='createComment(CC".$announcement["id"].",".$announcement['id'].");' >Add comment</button>".
+      "<button onclick='createComment(".$announcement['id'].");' >Add comment</button>".
       "</div>".
       "</div></div>";
 }
