@@ -9,8 +9,9 @@ if (isset($_COOKIE['benutzerdaten'])) {
 $extrascipt = "\r\n function showComments(id){".
         "\r\n if (document.getElementsByName(id + 'C').length != 0){".
          "\r\n var elemente = document.getElementsByName(id + 'C');".
+         "\r\n var parent = document.getElementById('' + id);".
          "\r\n for (var element of elemente){".
-         "\r\n document.getElementById('' + id).removeChild(element);".
+         "\r\n parent.removeChild(element);".
          "\r\n }".
          "\r\n }else{".
     "\r\n var request = new XMLHttpRequest();".
