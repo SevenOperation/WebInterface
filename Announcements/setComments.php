@@ -1,7 +1,7 @@
 <?php
 if(isset($_GET['id']) && isset($_GET['content'])){
     $db = new PDO('mysql:host=localhost;dbname=users', 'root', '');
-    $date = new \DateTime();
+    $date = new DateTime('NOW');
     $timeS = $date->format("Y-m-d H:i:s");
     $id = $_GET['id'];
     $contentGET = $_GET['content'];
