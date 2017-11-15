@@ -24,7 +24,6 @@ $extrascipt = "\r\n function showComments(id){".
     "\r\n request.send('');".
     "\r\n }\r\n} ".
     "\r\n function createComments(id){".
-    "\r\n alert(id);".
     "\r\n var idCC = document.getElementById('CC'+id);".
     "\r\n var request = new XMLHttpRequest();".
     "\r\n request.onreadystatechange = function() {".
