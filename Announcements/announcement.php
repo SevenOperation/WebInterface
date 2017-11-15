@@ -7,31 +7,31 @@ if (isset($_COOKIE['benutzerdaten'])) {
     $password = explode("-", $_COOKIE['benutzerdaten'])[1];
 }
 $extrascipt = "\r\n function showComments(id){".
-        "if (document.getElementsByName(id + 'C').length != 0){".
-         "var elemente = document.getElementsByName(id + 'C');".
-         "for (var element of elemente){".
-         "document.getElementById('' + id).removeChild(element);".
-         "}".
-         "}else{".
+        "\r\n if (document.getElementsByName(id + 'C').length != 0){".
+         "\r\n var elemente = document.getElementsByName(id + 'C');".
+         "\r\n for (var element of elemente){".
+         "\r\n document.getElementById('' + id).removeChild(element);".
+         "\r\n }".
+         "\r\n }else{".
     "\r\n var request = new XMLHttpRequest();".
      "\r\n request.onreadystatechange = function() {" .
         "\r\n if (request.readyState == 4 && request.status == 200){".
             "\r\n var div = document.getElementById('' + id);".
-            " div.innerHTML += request.responseText;".
+            "\r\n div.innerHTML += request.responseText;".
     "\r\n }".
     "\r\n }".
     "\r\n request.open('GET', 'getComments.php?id=' + id, true);".
     "\r\n request.send('');".
-    "\r\n }} ".
-    "function createComment(idCC , id){".
-    "var request = new XMLHttpRequest();".
-    "request.onreadystatechange = function() {".
-    "if (request.readyState == 4 && request.status == 200){".
-    "alert('Comment added')".
-    "}".
-    "}".
-    "request.open('GET', 'setComments.php?id=' + id +'&&content='+ document.getElementByID(idCC).value, true)".
-    "}";
+    "\r\n }\r\n} ".
+    "\r\n function createComment(idCC , id){".
+    "\r\n var request = new XMLHttpRequest();".
+    "\r\n request.onreadystatechange = function() {".
+    "\r\n if (request.readyState == 4 && request.status == 200){".
+    "\r\n alert('Comment added');".
+    "\r\n }".
+    "\r\n }".
+    "\r\n request.open('GET', 'setComments.php?id=' + id +'&&content='+ document.getElementByID(idCC).value, true)".
+    "\r\n }";
 getHeaderExtraScript($extrascipt);
 getNormalBodyTop($username);
 $db = new PDO('mysql:host=localhost;dbname=news', 'root', '');
