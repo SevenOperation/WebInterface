@@ -22,7 +22,15 @@ $extrascipt = "\r\n function showComments(id){".
     "\r\n }".
     "\r\n request.open('GET', 'getComments.php?id=' + id, true);".
     "\r\n request.send('');".
-    "\r\n }}";
+    "\r\n }} ".
+    "function createComment(idCC , id){".
+    "var request = new XMLHttpRequest();".
+    "request.onreadystatechange = function() {".
+    "if (request.readyState == 4 && request.status == 200){".
+    "alert('Comment added')".
+    "}".
+    "request.open('GET', 'setComments.php?id=' + id +'&&content='+ document.getElementByID(idCC).value, true)".
+    "}";
 getHeaderExtraScript($extrascipt);
 getNormalBodyTop($username);
 $db = new PDO('mysql:host=localhost;dbname=news', 'root', '');
@@ -33,14 +41,13 @@ foreach( $announcements as $announcement ){
       "<div  style='background-color: white'><p style='width: 100%; text-align: center'>".$announcement['titel']."</p></div>".
       "<div style='background-color: white;'><p style='width: 100%;'>".nl2br($announcement['content'])."</p></div>";
  echo "<button name='".$announcement['id']."' onclick='showComments(".$announcement['id'].")'>Show Comments</button>".
-      "<form action='' method='POST'>".
       "<div style='background-color: white'>".
       "<p>Comment:</p>".
-      "<textarea maxlength='1000' name='content' style='width: 100%; margin: auto; box-sizing: border-box'>".
+      "<textarea id='".$announcement['id']."CC' maxlength='1000' name='content' style='width: 100%; margin: auto; box-sizing: border-box'>".
       "</textarea>".
-      "<button type='submit'>Add comment</button>".
+      "<button onclick='createComment(".$announcement['id']."CC,".$announcement['id'].")' >Add comment</button>".
       "</div>".
-      "</form></div></div>";
+      "</div></div>";
 }
 }
 ?>
