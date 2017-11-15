@@ -11,10 +11,9 @@ if(isset($_GET['id'])){
               "<p>".$comment['created']."</p>\r\n</div>";
     }
     }else{
-        echo "<p>No Comments could be found</p>";
+        echo "<div name='".$_GET['id']."C'style='background-color: white;'>\r\n<p style='width: 100%;'>No comments could be found</p>".
+              "\r\n</div>";
     }
-}else{
-        echo "<p>No Comments could be found</p>";
-    }
+}
 ?>
 </body>
