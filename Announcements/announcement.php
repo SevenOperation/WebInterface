@@ -24,14 +24,14 @@ $extrascipt = "\r\n function showComments(id){".
     "\r\n request.send('');".
     "\r\n }\r\n} ".
     "\r\n function createComment(idCC , id){".
-    "\r\n alert('hi');".
+    "\r\n alert(idcc + ' ' + id);".
     "\r\n var request = new XMLHttpRequest();".
     "\r\n request.onreadystatechange = function() {".
     "\r\n if (request.readyState == 4 && request.status == 200){".
     "\r\n alert('Comment added');".
     "\r\n }".
     "\r\n }".
-    "\r\n var commentContentE = document.getElementById('' + idCC);".
+    "\r\n var commentContentE = document.getElementById('\' + idCC + '\');".
     "\r\n request.open('GET', 'setComments.php?id=' + id +'&&content='+ commentContentE.value, true);".
     "\r\n request.send('');".
     "\r\n }";
