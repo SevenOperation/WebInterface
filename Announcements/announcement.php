@@ -30,7 +30,8 @@ $extrascipt = "\r\n function showComments(id){".
     "\r\n alert('Comment added');".
     "\r\n }".
     "\r\n }".
-    "\r\n request.open('GET', 'setComments.php?id=' + id +'&&content='+ document.getElementByID(idCC).value, true);".
+    "\r\n var commentContentE = document.getElementByID(idCC);".
+    "\r\n request.open('GET', 'setComments.php?id=' + id +'&&content='+ commentContentE.value, true);".
     "\r\n request.send('');".
     "\r\n }";
 getHeaderExtraScript($extrascipt);
@@ -47,7 +48,7 @@ foreach( $announcements as $announcement ){
       "<p>Comment:</p>".
       "<textarea id='".$announcement['id']."CC' maxlength='1000' name='content' style='width: 100%; margin: auto; box-sizing: border-box'>".
       "</textarea>".
-      "<button onclick='createComment(".$announcement['id']."CC".$announcement['id'].")' >Add comment</button>".
+      "<button onclick='createComment(".$announcement['id']."CC,".$announcement['id'].")' >Add comment</button>".
       "</div>".
       "</div></div>";
 }
