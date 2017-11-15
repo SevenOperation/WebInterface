@@ -34,9 +34,9 @@ foreach( $announcements as $announcement ){
       "<div style='background-color: white;'><p style='width: 100%;'>".nl2br($announcement['content'])."</p></div>";
  echo "<button name='".$announcement['id']."' onclick='showComments(".$announcement['id'].")'>Show Comments</button>".
       "<form action='' method='POST'>".
-      "<div style='background-color: white; height: 200px;'>".
-      "<p>Text:</p>".
-      "<textarea maxlength='1000' name='content' style='width: 100%; height: 90%; margin: auto; box-sizing: border-box'>".
+      "<div style='background-color: white'>".
+      "<p>Comment:</p>".
+      "<textarea maxlength='1000' name='content' style='width: 100%; margin: auto; box-sizing: border-box'>".
       "</textarea>".
       "<button type='submit'>Add comment</button>".
       "</div>".
