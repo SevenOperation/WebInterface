@@ -14,7 +14,7 @@ if(isset($_GET['id']) && isset($_GET['content'])){
     echo var_dump($db->errorInfo());
     }
     $db = new PDO('mysql:host=localhost;dbname=news', 'root', '');
-    $db->query("INSERT into comments (userID,annoucementID,created,content) VALUES (".$userID.",".$id.",".$date.",".$contentGET.")");
+    $db->query("INSERT into comments (userID,annoucementID,created,content) VALUES (".$userID.",".$id.",'".$date."','".$contentGET."')");
     echo var_dump($db->errorInfo());
 }else{
     
