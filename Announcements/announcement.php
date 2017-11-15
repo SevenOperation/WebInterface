@@ -15,11 +15,11 @@ $extrascipt = "\r\n function showComments(id){".
          "}".
     "\r\n var request = new XMLHttpRequest();".
      "\r\n request.onreadystatechange = function() {" .
-        "\r\n if (request.readyState == 4 && request.status == 200)".
+        "\r\n if (request.readyState == 4 && request.status == 200){".
             "\r\n var div = document.getElementById('' + id);".
             " div.innerHTML += request.responseText;".
     "\r\n }".
-    "\r\n ".
+    "\r\n }".
     "\r\n request.open('GET', 'getComments.php?id=' + id, true);".
     "\r\n request.send('');".
     "\r\n }";
