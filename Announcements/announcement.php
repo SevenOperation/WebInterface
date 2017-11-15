@@ -8,11 +8,15 @@ if (isset($_COOKIE['benutzerdaten'])) {
 }
 $extrascipt = "\r\n function showComments(id){".
         "if (document.getElementsByName(id + 'C') != null){".
-         "alert('schon vorhanden')}".
+         "var elemente = document.getElementsByName(id + 'C');".
+         "for (var element of elemente){".
+         "element.textContent = '';".
+         "}".
+         "}".
     "\r\n var request = new XMLHttpRequest();".
      "\r\n request.onreadystatechange = function() {" .
         "\r\n if (request.readyState == 4 && request.status == 200)".
-            "\r\n var div = document.getElementById(id);".
+            "\r\n var div = document.getElementById('' + id);".
             " div.innerHTML += request.responseText;".
     "\r\n }".
     "\r\n ".
