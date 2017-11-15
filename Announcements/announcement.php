@@ -7,12 +7,12 @@ if (isset($_COOKIE['benutzerdaten'])) {
     $password = explode("-", $_COOKIE['benutzerdaten'])[1];
 }
 $extrascipt = "\r\n function showComments(id){".
-        "if (document.getElementsByName(id + 'C') != null){".
+        "if (document.getElementsByName(id + 'C').length != 0){".
          "var elemente = document.getElementsByName(id + 'C');".
          "for (var element of elemente){".
          "element.textContent = '';".
          "}".
-         "}".
+         "}else{".
     "\r\n var request = new XMLHttpRequest();".
      "\r\n request.onreadystatechange = function() {" .
         "\r\n if (request.readyState == 4 && request.status == 200){".
@@ -22,7 +22,7 @@ $extrascipt = "\r\n function showComments(id){".
     "\r\n }".
     "\r\n request.open('GET', 'getComments.php?id=' + id, true);".
     "\r\n request.send('');".
-    "\r\n }";
+    "\r\n }}";
 getHeaderExtraScript($extrascipt);
 getNormalBodyTop($username);
 $db = new PDO('mysql:host=localhost;dbname=news', 'root', '');
