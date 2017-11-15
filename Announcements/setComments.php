@@ -13,6 +13,8 @@ if(isset($_GET['id']) && isset($_GET['content'])){
     }
     $db = new PDO('mysql:host=localhost;dbname=news', 'root', '');
     $db->query("INSERT into comments (userID,annoucementID,created,content) VALUES (".$userID.",".$id.",".$timeS.",".$contentGET.")");
+}else{
+    
 }
 ?>
 
