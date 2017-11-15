@@ -47,9 +47,9 @@ foreach( $announcements as $announcement ){
  echo "<button name='".$announcement['id']."' onclick='showComments(".$announcement['id'].");'>Show Comments</button>".
       "<div style='background-color: white'>".
       "<p>Comment:</p>".
-      "<textarea id='CC".$announcement['id']."' maxlength='100' name='content' style='width: 100%; margin: auto; box-sizing: border-box'>".
+      "<textarea id='CC".$announcement['id']."' maxlength='1000' name='content' style='width: 100%; margin: auto; box-sizing: border-box'>".
       "</textarea>".
-      "<button onclick='createComment(".$announcement['id'].");' >Add comment</button>".
+      "<button name='button' onclick='createComment(".$announcement['id'].");' >Add comment</button>".
       "</div>".
       "</div></div>";
 }
