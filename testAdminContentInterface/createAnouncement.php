@@ -17,7 +17,7 @@ getNormalBodyTop($username);
 </div>
 <div style='background-color: white; height: 700px;'>
 <p>Text:</p>
-<textarea maxlength="1000" name='content' style='width: 100%; height: 90%; margin: auto; box-sizing: border-box'>
+<textarea maxlength="1000" name='content' style='width: 100%; height: 90%; margin: auto; box-sizing: border-box; resize: none'>
 </textarea>
 <button type='submit'>Announcement anlegen</button>
 </div>
