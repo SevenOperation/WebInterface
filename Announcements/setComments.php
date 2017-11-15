@@ -13,13 +13,13 @@ if(isset($_GET['id']) && isset($_GET['content'])){
     $userID = $db->query("Select id FROM user WHERE password='$password' and username='$username'");
     echo var_dump($db->errorInfo());
     }
-    $dbC = new PDO('mysql:host=localhost;dbname=news', 'root', '');
+    $db = new PDO('mysql:host=localhost;dbname=news', 'root', '');
     if($userID != NULL){
-    $dbC->query("INSERT INTO comments (userID ,annoucementID ,created ,content) VALUES (".$userID.",".$id.",'$date','$contentGET')");
+    $db->query("INSERT INTO comments (userID , annoucementID , created , content) VALUES ('$userID','$id','$date','$contentGET')");
     }  else {
-    $dbC->query("INSERT INTO comments (annoucementID ,created ,content) VALUES ('$id','$date','$contentGET')");    
+    $db->query("INSERT INTO comments (annoucementID ,created ,content) VALUES ('$id','$date','$contentGET')");    
     }
-    echo var_dump($dbC->errorInfo());
+    echo var_dump($db->errorInfo());
 }else{
     
 }
