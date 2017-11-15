@@ -31,7 +31,7 @@ $extrascipt = "\r\n function showComments(id){".
     "\r\n alert('Comment added');".
     "\r\n }".
     "\r\n }".
-    "\r\n var commentContentE = document.getElementById('\' + idCC + '\');".
+    "\r\n var commentContentE = document.getElementById(idCC);".
     "\r\n request.open('GET', 'setComments.php?id=' + id +'&&content='+ commentContentE.value, true);".
     "\r\n request.send('');".
     "\r\n }";
