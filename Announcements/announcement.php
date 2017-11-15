@@ -29,6 +29,7 @@ $extrascipt = "\r\n function showComments(id){".
     "if (request.readyState == 4 && request.status == 200){".
     "alert('Comment added')".
     "}".
+    "}".
     "request.open('GET', 'setComments.php?id=' + id +'&&content='+ document.getElementByID(idCC).value, true)".
     "}";
 getHeaderExtraScript($extrascipt);
