@@ -10,7 +10,7 @@ $extrascipt = "\r\n function showComments(id){".
         "if (document.getElementsByName(id + 'C').length != 0){".
          "var elemente = document.getElementsByName(id + 'C');".
          "for (var element of elemente){".
-         "element.textContent = '';".
+         "document.getElementById('' + id).removeChild(element);".
          "}".
          "}else{".
     "\r\n var request = new XMLHttpRequest();".
