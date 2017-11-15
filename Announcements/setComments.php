@@ -14,8 +14,12 @@ if(isset($_GET['id']) && isset($_GET['content'])){
     echo var_dump($db->errorInfo());
     }
     $dbC = new PDO('mysql:host=localhost;dbname=news', 'root', '');
-    $h = $dbC->query("INSERT INTO comments (userID ,annoucementID ,created ,content) VALUES ('$userID','$id','$date','$contentGET')");
-    //echo var_dump($dbC->errorInfo());
+    if($userID != NULL){
+    $dbC->query("INSERT INTO comments (userID ,annoucementID ,created ,content) VALUES ('$userID','$id','$date','$contentGET')");
+    }  else {
+    $dbC->query("INSERT INTO comments (annoucementID ,created ,content) VALUES ('$id','$date','$contentGET')");    
+    }
+    echo var_dump($dbC->errorInfo());
 }else{
     
 }
