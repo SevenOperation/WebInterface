@@ -5,7 +5,7 @@ if(isset($_GET['id']) && isset($_GET['content']) && $_GET['content'] != ""){
     
     session_start();
     $id = $_GET['id'];
-    $contentGET = $_GET['content'];
+    $contentGET = htmlspecialchars($_GET['content']);
     $userID=NULL;
     if (isset($_COOKIE['benutzerdaten'])) {
     $username = explode("-", $_COOKIE['benutzerdaten'])[0];

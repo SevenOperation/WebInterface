@@ -7,7 +7,7 @@ if(isset($_GET['id'])){
     $comments = $db->query("Select * from comments WHERE annoucementID=". $_GET['id'] ." ORDER BY id DESC");
     if($comments != FALSE && $comments->rowCount() != 0){
     foreach ($comments as $comment){
-        echo "<div name='".$comment['annoucementID']."C'style='background-color: white;'>\r\n<p style='width: 100%;'>".nl2br($comment['content'])."</p>\r\n".
+        echo "<div name='".$comment['annoucementID']."C'style='background-color: white;'>\r\n<p style='width: 100%;'>".nl2br(htmlspecialchars($comment['content']))."</p>\r\n".
               "<p>".$comment['created']."</p>\r\n</div>";
     }
     }else{
