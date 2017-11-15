@@ -50,8 +50,8 @@ foreach( $announcements as $announcement ){
       "<textarea id='CC".$announcement['id']."' maxlength='1000' name='content' style='width: 100%; margin: auto; box-sizing: border-box'>".
       "</textarea>".
       "<button name='button' onclick='createComment(".$announcement['id'].");' >Add comment</button>".
-      "</div>".
-      "</div></div>";*/
+      "</div>".*/
+echo     "</div></div>";
 }
 }
 ?>
