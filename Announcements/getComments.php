@@ -10,7 +10,7 @@ if(isset($_GET['id'])){
     foreach ($comments as $comment){
         $creator = $db->query("Select username from user WHERE id=". $comment['userID'] ." ORDER BY id DESC");
         echo "<div name='".$comment['annoucementID']."C'style='background-color: white;'>\r\n".
-              "\r\n <p style='font-size:16px'>".$creator->fetch(PDO::FETCH_ASSOC)[0]['username']."</p>".
+              "\r\n <p style='font-size:16px'>".$creator->fetch(PDO::FETCH_ASSOC)['username']."</p>".
               "\r\n <img src='' height='48' width='48' style='position: absolute'></img>".
               "<p style='margin-left: 50px; margin-right: 20px; font-size:16px; height: 96px; border-color: black; border-width: 1px; border-style: solid; box-sizing: border-box'>".nl2br(htmlspecialchars($comment['content']))."</p>\r\n".
               "<p style='font-size:16px; margin-top: 10px'>".$comment['created']."</p>\r\n</div>";
