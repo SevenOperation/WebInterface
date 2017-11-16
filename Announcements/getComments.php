@@ -8,7 +8,7 @@ if(isset($_GET['id'])){
     $db = new PDO('mysql:host=localhost;dbname=users', 'root', '');
     if($comments != FALSE && $comments->rowCount() != 0){
     foreach ($comments as $comment){
-        $creator = $db->query("Select username from user WHERE id =". $comment['userID'] ." ORDER BY id DESC");
+        $creator = $db->query("Select username from user WHERE id=". $comment['userID'] ." ORDER BY id DESC");
         echo "<div name='".$comment['annoucementID']."C'style='background-color: white;'>\r\n".
               "\r\n <p style='font-size:16px'>".$creator->fetch(PDO::FETCH_ASSOC)[0]['username']."</p>".
               "\r\n <img src='' height='48' width='48' style='position: absolute'></img>".
