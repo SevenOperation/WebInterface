@@ -29,6 +29,7 @@ $extrascipt = "\r\n function showComments(id){".
     "\r\n var request = new XMLHttpRequest();".
     "\r\n request.onreadystatechange = function() {".
     "\r\n if (request.readyState == 4 && request.status == 200){".
+    "\r\n idCC.value = ''; ".
     "\r\n alert('Comment added');".
     "\r\n }".
     "\r\n }".
