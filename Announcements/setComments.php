@@ -19,7 +19,8 @@ if(isset($_GET['id']) && isset($_GET['content']) && $_GET['content'] != "" && $_
     echo "Deine USER ID " . $userID;
     $db->query("INSERT INTO comments (userID , annoucementID , created , content) VALUES ('$userID','$id','$date','$contentGET')");
     }  else {
-    $db->query("INSERT INTO comments (annoucementID ,created ,content) VALUES ('$id','$date','$contentGET')");    
+    $db->query("INSERT INTO comments (userID , annoucementID ,created ,content) VALUES (NULL,'$id','$date','$contentGET')");
+    echo var_dump($db->errorInfo());    
     }
 }else{
     http_response_code(400);
