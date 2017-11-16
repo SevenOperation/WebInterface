@@ -23,7 +23,7 @@ if(isset($_GET['id']) && isset($_GET['content']) && $_GET['content'] != ""){
     }
     echo var_dump($db->errorInfo());
 }else{
-    
+    http_response_code(400);
 }
 
 
