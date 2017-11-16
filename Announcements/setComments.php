@@ -15,8 +15,8 @@ if(isset($_GET['id']) && isset($_GET['content']) && $_GET['content'] != "" && $_
     $db = new PDO('mysql:host=localhost;dbname=news', 'root', '');
      
     if(isset($userIDA)){
-    $userID = $userIDA->fetch(PDO::FETCH_ASSOC)[0]['id'];
-    echo "Deine USER ID " . $userID . $userIDA[0];
+    $userID = $userIDA->fetch(PDO::FETCH_ASSOC)['id'];
+    echo "Deine USER ID " . $userID;
     $db->query("INSERT INTO comments (userID , annoucementID , created , content) VALUES ('$userID','$id','$date','$contentGET')");
     }  else {
     $db->query("INSERT INTO comments (annoucementID ,created ,content) VALUES ('$id','$date','$contentGET')");    
