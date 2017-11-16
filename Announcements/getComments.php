@@ -10,7 +10,7 @@ if(isset($_GET['id'])){
         echo "<div name='".$comment['annoucementID']."C'style='background-color: white;'>\r\n".
               "\r\n <p style='font-size:16px'>TestName</p>".
               "\r\n <img src='' height='48' width='48' style='position: absolute'></img>".
-              "<p style='width: 100%;'>".nl2br(htmlspecialchars($comment['content']))."</p>\r\n".
+              "<p style='width: 100%; margin-left: 50px'>".nl2br(htmlspecialchars($comment['content']))."</p>\r\n".
               "<p>".$comment['created']."</p>\r\n</div>";
     }
     }else{
