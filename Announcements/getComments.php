@@ -9,7 +9,7 @@ if(isset($_GET['id'])){
     if($comments != FALSE && $comments->rowCount() != 0){
     foreach ($comments as $comment){
         $creator = $db->query("Select username from user WHERE id=". $comment['userID'] ." ORDER BY id DESC");
-        if(isset($creator) && !$creator){
+        if(isset($creator) && $creator != false){
         $creatorS = $creator->fetch(PDO::FETCH_ASSOC)['username'];
         
         if(!isset($creatorS)) $creatorS="Unknown (Guest)";
