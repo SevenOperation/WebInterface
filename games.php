@@ -1,7 +1,8 @@
 
 <?php 
 include_once 'testAdminContentInterface/htmlbuildHelper.php';
-file_put_contents('user.txt', $_SERVER['REMOTE_ADDR'] ); 
+file_put_contents('user.txt', $_SERVER['REMOTE_ADDR'] );
+session_name('WATGSESSID'); 
 session_start();
  
 if (isset($_COOKIE['benutzerdaten'])) {

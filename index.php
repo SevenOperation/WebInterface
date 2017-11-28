@@ -2,6 +2,7 @@
 <?php 
 include_once './logs/logger.php';
 include_once 'testAdminContentInterface/htmlbuildHelper.php';
+session_name('WATGSESSID');
 session_start();
 if (isset($_COOKIE['benutzerdaten'])) {
     $username = explode("-", $_COOKIE['benutzerdaten'])[0];

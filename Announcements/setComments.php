@@ -2,7 +2,7 @@
 if(isset($_GET['id']) && isset($_GET['content']) && $_GET['content'] != "" && $_GET['id']!=""){
     $db = new PDO('mysql:host=localhost;dbname=users', 'root', '');
     $date = date("Y-m-d H:i:s");
-    
+    session_name('WATGSESSID'); 
     session_start();
     $id = $_GET['id'];
     $contentGET = htmlspecialchars($_GET['content']);

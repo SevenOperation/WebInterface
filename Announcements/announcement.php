@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 require_once '../testAdminContentInterface/htmlbuildHelper.php';
+session_name('WATGSESSID');
 session_start();
 $username = NULL;
 if (isset($_COOKIE['benutzerdaten'])) {

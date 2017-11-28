@@ -1,6 +1,7 @@
 <?php
 function getNormalHeader(){
 echo '<!DOCTYPE html>';
+session_name('WATGSESSID');
 session_start();
 if (isset($_COOKIE['benutzerdaten'])) {
     $username = explode("-", $_COOKIE['benutzerdaten'])[0];
@@ -40,6 +41,7 @@ echo "<html>" .
 
 function getHeaderExtraScript($extrascipt){
 echo '<!DOCTYPE html>';
+session_name('WATGSESSID');
 session_start();
 if (isset($_COOKIE['benutzerdaten'])) {
     $username = explode("-", $_COOKIE['benutzerdaten'])[0];

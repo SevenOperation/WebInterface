@@ -7,6 +7,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <?php 
+session_name('WATGSESSID');
 session_start();
 if (isset($_COOKIE['benutzerdaten'])) {
     $username = explode("-", $_COOKIE['benutzerdaten'])[0];
