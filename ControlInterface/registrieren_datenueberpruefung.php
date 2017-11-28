@@ -26,8 +26,8 @@ if (isset($daten) && isset($usern) && isset($pass) && isset($_POST["passwordw"])
 if ($login == true) {
   $_SESSION['angemeldet' . $usern] = true;
   setcookie('user', $usern, 0 , "/" );
-  header('Location: controlinterface.php');
+  header('Location: controlinterface');
 } else {
-header('Location: registrieren.php');
+header('Location: registrieren');
 }
 ?>

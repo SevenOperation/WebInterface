@@ -1,4 +1,10 @@
 <?php
+//$username="";
+//if (isset($_COOKIE['benutzerdaten'])) {
+//    $username = explode("-", $_COOKIE['benutzerdaten'])[0];
+//    $password = explode("-", $_COOKIE['benutzerdaten'])[1];
+//}
+
 function getNormalHeader(){
 echo '<!DOCTYPE html>';
 session_name('WATGSESSID');
@@ -43,10 +49,6 @@ function getHeaderExtraScript($extrascipt){
 echo '<!DOCTYPE html>';
 session_name('WATGSESSID');
 session_start();
-if (isset($_COOKIE['benutzerdaten'])) {
-    $username = explode("-", $_COOKIE['benutzerdaten'])[0];
-    $password = explode("-", $_COOKIE['benutzerdaten'])[1];
-}
 echo "<html>" .
     "<head>" .
         "<meta charset='UTF-8'>".
@@ -81,7 +83,12 @@ echo "<html>" .
     "</head>";
 }
 
-function getNormalBodyTop($username){
+function getNormalBodyTop(){
+if (isset($_COOKIE['benutzerdaten'])) {
+     $username = explode("-", $_COOKIE['benutzerdaten'])[0];
+     $password = explode("-", $_COOKIE['benutzerdaten'])[1];
+}
+
 echo "<body style='background-image: url(/Logo_1.png);  background-size: cotain;'>".
         "<div style='background-color: #24292e; padding-top: 12px; padding-bottom: 12px; line-height: 1.5 ;'>".
             "<div class='head' style='width: 52%; margin-left: auto; margin-right: auto; line-height: 1.5; font-size: 14px'>".

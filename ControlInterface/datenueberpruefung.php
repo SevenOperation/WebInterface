@@ -1,4 +1,5 @@
 <?php
+session_name('WATGSESSID');
 session_start();
 $db = new PDO('mysql:host=localhost;dbname=users', 'root', '');
 var_dump($db->errorInfo());
@@ -21,8 +22,8 @@ if ($login == true) {
   $_SESSION['angemeldet' . $_POST['username']] = true;
   setcookie('user', $_POST['username'], 0 , "/" );
   setcookie('benutzerdaten', $_POST['username'] . "-" . $_POST["password"], 0 , "/" );
-  header('Location: /index.php');
+  header('Location: /index');
 } else {
-  header('Location: /index.php');
+  header('Location: /index');
 }
 ?>
