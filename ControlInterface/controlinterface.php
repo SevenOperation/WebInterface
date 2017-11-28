@@ -1,5 +1,6 @@
 <!Doctype HTML>
 <?php
+session_name("WATGSESSID");
 session_start();
 if (!isset($_SESSION['angemeldet' . $_COOKIE['user']]) || $_SESSION['angemeldet' . $_COOKIE['user']] != true) {
     header('Location: /index.php');
