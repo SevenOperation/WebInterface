@@ -31,7 +31,7 @@ if(isset($_POST["submit"])) {
         echo "Sorry, there was an error uploading your file.";
     }
     } else {
-        echo "File is not an image.";
+        echo "File is not an Image.";
         $uploadOk = 0;
     }
 }
