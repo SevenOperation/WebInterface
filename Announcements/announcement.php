@@ -23,7 +23,7 @@ $extrascipt = "\r\n function showComments(id){".
             "\r\n div.innerHTML += request.responseText;".
     "\r\n }".
     "\r\n }".
-    "\r\n request.open('GET', 'getComments.php?id=' + id, true);".
+    "\r\n request.open('GET', 'getComments?id=' + id, true);".
     "\r\n request.send('');".
     "\r\n }\r\n} ".
     "\r\n function createComments(id){".
@@ -37,7 +37,7 @@ $extrascipt = "\r\n function showComments(id){".
     "\r\n alert('Error: Comment field maybe emtpy' )".
     "\r\n }".
     "\r\n }".
-    "\r\n request.open('GET', 'setComments.php?id=' + id +'&&content='+ idCC.value, true);".
+    "\r\n request.open('GET', 'setComments?id=' + id +'&&content='+ idCC.value, true);".
     "\r\n request.send('');".
     "\r\n }";
 getHeaderExtraScript($extrascipt);
