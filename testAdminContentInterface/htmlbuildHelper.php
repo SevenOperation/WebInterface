@@ -6,6 +6,7 @@
 //}
 
 function getNormalHeader(){
+getViewCounter();
 echo '<!DOCTYPE html>';
 session_name('WATGSESSID');
 session_start();
@@ -45,7 +46,8 @@ echo "<html>" .
     "</head>";
 }
 
-function getHeaderExtraScript($extrascipt){
+function getHeaderExtraScript($extrascript){
+getViewCounter();
 echo '<!DOCTYPE html>';
 session_name('WATGSESSID');
 session_start();
@@ -77,7 +79,7 @@ echo "<html>" .
             "        }".
             "    }".
             "}".
-        $extrascipt.
+        $extrascript.
        " </script>".
         
     "</head>";
@@ -89,7 +91,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
      $password = explode("-", $_COOKIE['benutzerdaten'])[1];
 }
 
-echo "<body style='background-image: url(/Logo_1.png);  background-size: cotain;'>".
+echo "<body style='background-image: url(/Logo_1.png);  background-size: cover;'>".
         "<div style='background-color: #24292e; padding-top: 12px; padding-bottom: 12px; line-height: 1.5 ;'>".
             "<div class='head' style='width: 52%; margin-left: auto; margin-right: auto; line-height: 1.5; font-size: 14px'>".
                 "<ul style='margin-top: 0; list-style: none; float: left; padding-left: 0; margin-bottom: 0'>".
@@ -192,4 +194,17 @@ echo "<body style='background-image: url(/Logo_2.jpg);  background-size: cotain;
                     </div>";
                     }
 }
+
+function getViewCounter(){
+$counter = file_get_contents("/var/www/html/WebInterface/testAdminContentInterface/views");
+if(isset($counter)){
+$counter ++;
+}else{
+$counter = 1;
+}
+
+file_put_contents("/var/www/html/WebInterface/testAdminContentInterface/views",$counter);
+}
 ?>
+
+
