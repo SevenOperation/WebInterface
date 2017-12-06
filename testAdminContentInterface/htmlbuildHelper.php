@@ -1,11 +1,8 @@
 <?php
-//$username="";
-//if (isset($_COOKIE['benutzerdaten'])) {
-//    $username = explode("-", $_COOKIE['benutzerdaten'])[0];
-//    $password = explode("-", $_COOKIE['benutzerdaten'])[1];
-//}
+include_once '/var/www/html/WebInterface/logs/logger.php';
 
 function getNormalHeader(){
+logIP();
 getViewCounter();
 echo '<!DOCTYPE html>';
 session_name('WATGSESSID');
@@ -47,6 +44,7 @@ echo "<html>" .
 }
 
 function getHeaderExtraScript($extrascript){
+logIP();
 getViewCounter();
 echo '<!DOCTYPE html>';
 session_name('WATGSESSID');
@@ -151,10 +149,15 @@ echo "<body style='background-image: url(/Logo_1.png);  background-size: cover;'
                     }
 }
 
-function getBodySSSZBild($username){
-echo "<body style='background-image: url(/Logo_2.jpg);  background-size: cotain;'>".
+function getBodySSSZBild(){
+if (isset($_COOKIE['benutzerdaten'])) {
+     $username = explode("-", $_COOKIE['benutzerdaten'])[0];
+     $password = explode("-", $_COOKIE['benutzerdaten'])[1];
+}
+
+echo "<body style='background-image: url(/Logo_1.png);  background-size: cover;'>".
         "<div style='background-color: #24292e; padding-top: 12px; padding-bottom: 12px; line-height: 1.5 ;'>".
-            "<div class='head' style='width: 960px; margin-left: auto; margin-right: auto; line-height: 1.5; font-size: 14px'>".
+            "<div class='head' style='width: 52%; margin-left: auto; margin-right: auto; line-height: 1.5; font-size: 14px'>".
                 "<ul style='margin-top: 0; list-style: none; float: left; padding-left: 0; margin-bottom: 0'>".
                     "<li><a href='/index'>Startseite</a></li>".
                     "<li><a href='/News/news'>News</a></li>".
@@ -173,12 +176,11 @@ echo "<body style='background-image: url(/Logo_2.jpg);  background-size: cotain;
                         echo "</ul><ul style='margin: 0; list-style: none; float: right;'>
                     <li style='float: left'><a class='einloggenCss' onclick='userMenue()'>Einloggen</a></li>
                     <li style='float: left'><a class='einloggenCss' onclick='registerUser()'>Registrieren</a></li>
-                    </ul></div></div>";
-                        echo "<div style='width: 960px; margin-left: auto; margin-right: auto;'>
+                    </ul></div><div style='width: 52%; margin-left: auto; margin-right: auto;'>
                         <div id='login' style='width: 340px;' class='drop2' align='center'>
                             <form action='/ControlInterface/datenueberpruefung' method='post'>
                                 <p><input class='input' id='username' name='username' type='text' placeholder='Username'/></p>
-                                <p><input class='input' id='password' name='password' type='text' placeholder='Password'/></p>
+                                <p><input class='input' id='password' name='password' type='password' placeholder='Password'/></p>
                                 <p><button type='submit'>Einloggen</button></p>
                             </form>
                         </div>
@@ -186,8 +188,26 @@ echo "<body style='background-image: url(/Logo_2.jpg);  background-size: cotain;
                     <div id='register' style='width: 340px;' class='drop2' align='center'>
                         <form action='/ControlInterface/registrieren_datenueberpruefung' method='post'>
                             <p><input class='input' id='username' name='username' type='text' placeholder='Username'/></p>
-                            <p><input class='input' id='password' name='password' type='text' placeholder='Password'/></p>
-                            <p><input class='input' id='passwordw' name='passwordw' type='text' placeholder='Password Wiederholen' required='required'/></p>
+                            <p><input class='input' id='password' name='password' type='password' placeholder='Password'/></p>
+                            <p><input class='input' id='passwordw' name='passwordw' type='password' placeholder='Password Wiederholen' required='required'/></p>
+                            <p><button type='submit'>Registrieren</button>
+                            </p>
+                        </form>
+                    </div></div>";
+                        echo "<div style='width: 960px; margin-left: auto; margin-right: auto;'>
+                        <div id='login' style='width: 340px;' class='drop2' align='center'>
+                            <form action='/ControlInterface/datenueberpruefung' method='post'>
+                                <p><input class='input' id='username' name='username' type='text' placeholder='Username'/></p>
+                                <p><input class='input' id='password' name='password' type='password' placeholder='Password'/></p>
+                                <p><button type='submit'>Einloggen</button></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div id='register' style='width: 340px;' class='drop2' align='center'>
+                        <form action='/ControlInterface/registrieren_datenueberpruefung' method='post'>
+                            <p><input class='input' id='username' name='username' type='text' placeholder='Username'/></p>
+                            <p><input class='input' id='password' name='password' type='password' placeholder='Password'/></p>
+                            <p><input class='input' id='passwordw' name='passwordw' type='password' placeholder='Password Wiederholen' required='required'/></p>
                             <p><button type='submit'>Registrieren</button>
                             </p>
                         </form>

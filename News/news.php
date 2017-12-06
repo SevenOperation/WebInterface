@@ -16,7 +16,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
 
 require_once '../testAdminContentInterface/htmlbuildHelper.php';
 getNormalHeader();
-getNormalBodyTop($username);
+getNormalBodyTop();
 ?>
 <iframe width="600" height="340" src="https://www.youtube.com/embed/latest?list=UChX1P_mHNWCcaa9oHvHiRAg" frameborder="0" allowfullscreen></iframe> 
 <iframe width="600" height="340" src="https://www.youtube.com/channel/UChX1P_mHNWCcaa9oHvHiRAg/feed?activity_view=1" frameborder="0" allowfullscreen></iframe>
