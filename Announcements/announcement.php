@@ -33,7 +33,10 @@ $extrascipt = "\r\n function showComments(id){".
     "\r\n if (request.readyState == 4 && request.status == 200){".
     "\r\n idCC.value = ''; ".
     "\r\n alert('Comment added');".
-    "\r\n showComments(id)".
+    "\r\n if(document.getElementsByName(id + 'C').length != 0){".
+    "\r\n showComments(id);".
+    "\r\n }".
+    "\r\n showComments(id);".
     "\r\n }else if(request.readyState == 4 && request.status == 400){ ".
     "\r\n alert('Error: Comment field maybe emtpy' )".
     "\r\n }".
