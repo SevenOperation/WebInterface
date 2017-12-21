@@ -96,7 +96,8 @@ echo "<body style='background-image: url(/Logo_1.png);  background-size: cover;'
                     "<li><a href='/index'>Startseite</a></li>".
                     "<li><a href='/News/news'>News</a></li>".
                     "<li><a href='/games'>Games</a></li>".
-                    "<li><a href='/Announcements/announcement'>Ankündigungen</a></li>";
+                    "<li><a href='/Announcements/announcement'>Ankündigungen</a></li>".
+		    "<li><a href='/teamspeak3'>Teamspeak3 Overview</a></li>";
                      if (isset($_COOKIE['benutzerdaten']) && isset($_SESSION["angemeldet" . $username]) && $_SESSION["angemeldet" . $username] == true) {
                      echo "</ul><ul style='margin: 0; list-style: none; float: right;'>
                      <li style='float: left'><a class='einloggenCss' onclick='userMenue()'><img src='./../uploads/0140.png' width='16' height='16'></img>" . $username . "</a></li>
