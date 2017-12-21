@@ -2,7 +2,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['angemeldet' . $_COOKIE['user']]) || $_SESSION['angemeldet' . $_COOKIE['user']] != true) {
-    header('Location: /index.php');
+    header('Location: /index');
 }
 ?>
 <html>
@@ -24,7 +24,7 @@ if (!isset($_SESSION['angemeldet' . $_COOKIE['user']]) || $_SESSION['angemeldet'
             function absenden() {
                 var command = document.getElementById('command').value;
                 xhttp = new XMLHttpRequest();
-                xhttp.open("POST", "command.php", true);
+                xhttp.open("POST", "command", true);
                 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 xhttp.send('command=' + command);
                 alert("Command send");

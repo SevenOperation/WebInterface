@@ -2,7 +2,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['angemeldet' . $_COOKIE['user']]) || $_SESSION['angemeldet' . $_COOKIE['user']] != true) {
-    header('Location: /index.php');
+    header('Location: /index');
 }
 ?>
 <html>
@@ -19,7 +19,7 @@ if (!isset($_SESSION['angemeldet' . $_COOKIE['user']]) || $_SESSION['angemeldet'
            var spiel = <?php echo json_encode(file_get_contents("spiel.txt")); ?>;
            <?php if(file_get_contents("status.txt") != "online"){
            echo "xhttp = new XMLHttpRequest();";
-           echo "xhttp.open('POST', 'functions.php', true);";
+           echo "xhttp.open('POST', 'functions', true);";
            echo "xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');";
            echo "xhttp.send('function=' + spiel);" ;
            echo "alert(spiel + 'Server wird gestartet');";

@@ -29,8 +29,8 @@ echo $user["password"];
 if ($login == true) {
   $_SESSION['angemeldet' . $_POST['username']] = true;
   setcookie('user', $_POST['username'], 0 , "/" );
-  header('Location: controlinterface.php');
+  header('Location: controlinterface');
 } else {
-  header('Location: webinterface.php');
+  header('Location: webinterface');
 }
 ?>

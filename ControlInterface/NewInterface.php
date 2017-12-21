@@ -43,8 +43,8 @@ if (isset($_COOKIE['benutzerdaten'])) {
         <div style='background-color: #24292e; padding-top: 12px; padding-bottom: 12px; line-height: 1.5 ;'>
             <div class='head' style='width: 960px; margin-left: auto; margin-right: auto; line-height: 1.5; font-size: 14px'>
              <?php echo"  <ul style='margin-top: 0; list-style: none; float: left; padding-left: 0; margin-bottom: 0'>
-                    <li><a href='/index.php'>Startseite</a></li>
-                    <li><a href='/News/news.php'>News</a></li>
+                    <li><a href='/index'>Startseite</a></li>
+                    <li><a href='/News/news'>News</a></li>
                     <li><a href=''>Games</a></li>
                     <li><a href=''>Ankündigungen</a></li>";
                     
@@ -54,8 +54,8 @@ if (isset($_COOKIE['benutzerdaten'])) {
                     </ul></div></div>";
                         echo "<div style='width: 1080px; margin-left: auto; margin-right: auto; padding: 0;'>
                               <div style='position: absolute; z-index:2' id='login' class='drop2' align='center'>
-                              <p><a style='color:black;' href='ControlInterface/controlinterface.php'>WebInterface</a></p>
-                              <p><a style='color:black;' href='/logout.php'>LogOut</a></p>
+                              <p><a style='color:black;' href='ControlInterface/controlinterface'>WebInterface</a></p>
+                              <p><a style='color:black;' href='/logout'>LogOut</a></p>
                               </div></div>";
                     } else {
                         echo "</ul><ul style='margin: 0; list-style: none; float: right;'>
@@ -64,7 +64,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
                     </ul></div></div>";
                         echo "<div style='width: 960px; margin-left: auto; margin-right: auto;'>
                         <div id='login' style='width: 340px;' class='drop2' align='center'>
-                            <form action='/ControlInterface/datenueberpruefung.php' method='post'>
+                            <form action='/ControlInterface/datenueberpruefung' method='post'>
                                 <p><input class='input' id='username' name='username' type='text' placeholder='Username'/></p>
                                 <p><input class='input' id='password' name='password' type='text' placeholder='Password'/></p>
                                 <p><button type='submit'>Einloggen</button></p>
@@ -72,7 +72,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
                         </div>
                     </div>
                     <div id='register' style='width: 340px;' class='drop2' align='center'>
-                        <form action='/ControlInterface/registrieren_datenueberpruefung.php' method='post'>
+                        <form action='/ControlInterface/registrieren_datenueberpruefung' method='post'>
                             <p><input class='input' id='username' name='username' type='text' placeholder='Username'/></p>
                             <p><input class='input' id='password' name='password' type='text' placeholder='Password'/></p>
                             <p><input class='input' id='passwordw' name='passwordw' type='text' placeholder='Password Wiederholen' required='required'/></p>
@@ -86,10 +86,10 @@ if (isset($_COOKIE['benutzerdaten'])) {
             <ul style='margin: 0px;'>
                 <li class='nav-header'><a class='nav-title'> Einstellungen</a>
                     <ul>
-                        <li class='nav'><a href='status.php' target='content' ><img class='symbols' src='konsole_symbole.png'>Status</a></li>
-                        <li class='nav'><a href='ci_konsole.php' target='content' ><img class='symbols' src='konsole_symbole.png'>Konsole</a></li>
-                        <li class='nav'><a href='ci_start.php' target='content'><img class='symbols' src='konsole_symbole.png'>Start</a></li>
-                        <li class='nav'><a href='ci_gameselection.php' target='content'><img class='symbols' src='konsole_symbole.png'>Spiel Auswählen</a></li>
+                        <li class='nav'><a href='status' target='content' ><img class='symbols' src='konsole_symbole.png'>Status</a></li>
+                        <li class='nav'><a href='ci_konsole' target='content' ><img class='symbols' src='konsole_symbole.png'>Konsole</a></li>
+                        <li class='nav'><a href='ci_start' target='content'><img class='symbols' src='konsole_symbole.png'>Start</a></li>
+                        <li class='nav'><a href='ci_gameselection' target='content'><img class='symbols' src='konsole_symbole.png'>Spiel Auswählen</a></li>
                       
                     </ul>
                 </li>

@@ -2,7 +2,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['angemeldet' . $_COOKIE['user']]) || $_SESSION['angemeldet' . $_COOKIE['user']] != true) {
-    header('Location: /index.php');
+    header('Location: /index');
 }
 ?>
 <html>
@@ -25,7 +25,7 @@ if (!isset($_SESSION['angemeldet' . $_COOKIE['user']]) || $_SESSION['angemeldet'
            function selectGame(game){
        
            var xhttp = new XMLHttpRequest();
-           xhttp.open('POST', 'selectgame.php', true);
+           xhttp.open('POST', 'selectgame', true);
            xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
            xhttp.send('Spiel=' + game);
            alert(game + ' Ausgewählt');

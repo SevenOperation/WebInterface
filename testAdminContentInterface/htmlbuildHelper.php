@@ -99,12 +99,13 @@ echo "<body style='background-image: url(/Logo_1.png);  background-size: cover;'
                     "<li><a href='/Announcements/announcement'>Ankündigungen</a></li>";
                      if (isset($_COOKIE['benutzerdaten']) && isset($_SESSION["angemeldet" . $username]) && $_SESSION["angemeldet" . $username] == true) {
                      echo "</ul><ul style='margin: 0; list-style: none; float: right;'>
-                     <li style='float: left'><a class='einloggenCss' onclick='userMenue()'>" . $username . "</a></li>
+                     <li style='float: left'><a class='einloggenCss' onclick='userMenue()'><img src='./../uploads/0140.png' width='16' height='16'></img>" . $username . "</a></li>
                      </ul></div></div>";
-                        echo "<div style='width: 1080px; margin-left: auto; margin-right: auto; padding: 0;'>
+                        echo "<div style='width: 50%; margin-left: auto; margin-right: auto; padding: 0;'>
                               <div style='position: absolute; z-index:2' id='login' class='drop2' align='center'>
                               <p><a style='color:black;' href='/ControlInterface/controlinterface'>WebInterface</a></p>
                               <p><a style='color:black;' href='/logout'>LogOut</a></p>
+                              <p><a style='color:black;' href='/User/settings'>Settings</a></p>
                               </div></div>";
                     } else {
                         echo "</ul><ul style='margin: 0; list-style: none; float: right;'>
@@ -165,7 +166,7 @@ echo "<body style='background-image: url(/Logo_1.png);  background-size: cover;'
                     "<li><a href='/Announcements/announcement'>Ankündigungen</a></li>";
                      if (isset($_COOKIE['benutzerdaten']) && isset($_SESSION["angemeldet" . $username]) && $_SESSION["angemeldet" . $username] == true) {
                      echo "</ul><ul style='margin: 0; list-style: none; float: right;'>
-                     <li style='float: left'><a class='einloggenCss' onclick='userMenue()'>" . $username . "</a></li>
+                     <li style='float: left'><a class='einloggenCss' onclick='userMenue()'><img src='./../uploads/0140.png' width='16' height='16'></img>" . $username . "</a></li>
                      </ul></div></div>";
                         echo "<div style='width: 1080px; margin-left: auto; margin-right: auto; padding: 0;'>
                               <div style='position: absolute; z-index:2' id='login' class='drop2' align='center'>
