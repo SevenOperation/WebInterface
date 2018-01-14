@@ -3,7 +3,7 @@
 session_start();
 require_once '../testAdminContentInterface/htmlbuildHelper.php';
 $extrascipt=" \r\n function showImageBig(id){"
-             ."\r\n window.location = document.getElementByID(id).src;"
+             ."\r\n window.location = document.getElementById(id).src;"
              ."\r\n }";
 getHeaderExtraScript($extrascipt);
 getNormalBodyTop();
