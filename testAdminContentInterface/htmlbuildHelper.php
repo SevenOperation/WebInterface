@@ -1,5 +1,5 @@
 <?php
-include_once '../logs/logger.php';
+include_once '/var/www/html/WebInterface/logs/logger.php';
 
 function getNormalHeader(){
 logIP();
