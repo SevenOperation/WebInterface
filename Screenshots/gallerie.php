@@ -26,7 +26,7 @@ if(is_dir($dir_path))
 {
     $files = scandir($dir_path);
     
-    for($i = 0; $i < count($files); $i++)
+    for($i = 0; $i < sizeof($files); $i++)
     {
         if($files[$i] !='.' && $files[$i] !='..')
         {
