@@ -20,7 +20,21 @@ $extrascript = "\r\n function getAnnouncement(id){".
     "\r\n request.open('POST', 'getAnnouncement', true);".
     "\r\n request.setRequestHeader('Content-type','application/x-www-form-urlencoded');".
     "\r\n request.send('id='+id);".
-    "\r\n }\r\n} ";
+    "\r\n }".
+    "\r\n} " .
+    "\r\n function removeAnnouncement(id){".
+    " var request = new XMLHttpRequest();".
+     "\r\n request.onreadystatechange = function() {" .
+        "\r\n if (request.readyState == 4 && request.status == 200){".
+            "\r\n var div = document.getElementById('' + id);".
+            "\r\n div.outerHTML += request.responseText;".
+            "\r\n location.reload();". 
+    "\r\n }".
+    "\r\n }".
+    "\r\n request.open('POST', 'removeAnnouncements', true);".
+    "\r\n request.setRequestHeader('Content-type','application/x-www-form-urlencoded');".
+    "\r\n request.send('id='+id);".
+    "}";
 getHeaderExtraScript($extrascript);
 getNormalBodyTop($username);
 ?>
@@ -35,7 +49,7 @@ foreach($announcement_list as $announcement){
 echo "<tr id='$announcement[id]'><td>" .$announcement['id'] . "</td>";
 echo "<td>" . $announcement['titel']. "</td>";
 echo "<td><button onclick='getAnnouncement($announcement[id])'>Edit</button></td>";
-echo "<td><button>Delete</button></td></tr>";
+echo "<td><button onclick='removeAnnouncement($announcement[id])'>Delete</button></td></tr>";
 }
 ?>
 </div>
