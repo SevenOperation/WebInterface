@@ -15,11 +15,20 @@ if (isset($_COOKIE['benutzerdaten'])) {
 }
 
 require_once '../testAdminContentInterface/htmlbuildHelper.php';
-getNormalHeader();
+$script = "\n function resizeIFrame(){".
+"\r\n var iFrame = document.getElementById('youtube');".
+"\r\n iFrame.width = document.body.scrollWidth;".
+"\r\n iFrame.height = window.screen.height;".
+"\r\n }".
+"\r\n content.addEventListener('load', function(e){".
+"\r\n resizeIFrame();".
+"\r\n });";
+getHeaderExtraScript($script);
 getNormalBodyTop();
+$id="UhkgBR6Sd6Q"
+//GET https://www.googleapis.com/youtube/v3/search?part=snippet%2Cid&channelId=UChX1P_mHNWCcaa9oHvHiRAg&maxResults=1&order=date&key={YOUR_API_KEY}
 ?>
-<iframe width="600" height="340" src="https://www.youtube.com/embed/latest?list=UChX1P_mHNWCcaa9oHvHiRAg" frameborder="0" allowfullscreen></iframe> 
-<iframe width="600" height="340" src="https://www.youtube.com/channel/UChX1P_mHNWCcaa9oHvHiRAg/feed?activity_view=1" frameborder="0" allowfullscreen></iframe>
+<iframe id="youtube" width="854" height="480" src="https://www.youtube.com/embed/UhKgBR6SD6Q" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
                     </body>
                     </html>
 
