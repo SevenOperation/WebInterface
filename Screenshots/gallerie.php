@@ -46,7 +46,7 @@ if(is_dir($dir_path))
             // show image
             echo "
 
-			<tr><td width='".getimagesize($files[$i])[0] / 100 * 10 ."px'><button onclick='showImageBig($i);'><img id='$i' src='$files[$i]' style='height:10%;'></button><tr><td>
+			<tr><td width='".getimagesize($files[$i])[0] / 100 * 10 ."px'><button onclick='showImageBig($i);'><img id='$i' src='$files[$i]' style='width:100%; height:10%;'></button><tr><td>
 			";
 			
             }
