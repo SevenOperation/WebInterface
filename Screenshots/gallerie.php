@@ -44,8 +44,7 @@ if(is_dir($dir_path))
             if(isset($extension) && in_array($extension, $extensions_array) && $extension != "")
             {
             echo "
-			<tr><td><img id='$i' src='$files[$i]' style='width:10%; height:10%;' onclick='showImageBig($i);'></button><tr><td>
-			";
+			<tr><td width='".  getimagesize($files[$i])[0]."px'><img id='$i' src='$files[$i]' style='width:10%; height:10%;' onclick='showImageBig($i);'></button></td></tr>";
 			
             }
         }
