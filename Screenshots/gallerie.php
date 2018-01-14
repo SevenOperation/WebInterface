@@ -1,7 +1,11 @@
+<!Doctype html>
 <?php
 session_start();
 require_once '../testAdminContentInterface/htmlbuildHelper.php';
-getNormalHeader();
+$extrascipt=" \r\n function showImageBig(path){"
+             ."\r\n window.location = '' + path;"
+             ."\r\n }";
+getHeaderExtraScript($extrascipt);
 getNormalBodyTop();
 $password = filter_input(INPUT_POST , "staffkey");
 if($password == "unreal" || $_SESSION['screen_rights'] = "true" ) {
@@ -42,7 +46,7 @@ if(is_dir($dir_path))
             // show image
             echo "
 
-			<tr><td><img id='$i' src='$files[$i]' style='width:10%;height:10%;'><tr><td>
+			<tr><td><button onclick='showImageBig(./$files[$i]])'><img id='$i' src='$files[$i]' style='width:10%;height:10%;'></button><tr><td>
 			<h1>$files[$i]</h1></br>
 			";
 			
