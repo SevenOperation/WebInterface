@@ -2,8 +2,8 @@
 <?php
 session_start();
 require_once '../testAdminContentInterface/htmlbuildHelper.php';
-$extrascipt=" \r\n function showImageBig(path){"
-             ."\r\n window.location = '' + path;"
+$extrascipt=" \r\n function showImageBig(path , extension){"
+             ."\r\n window.location = '' + path + '.' + extension;"
              ."\r\n }";
 getHeaderExtraScript($extrascipt);
 getNormalBodyTop();
