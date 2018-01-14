@@ -20,7 +20,7 @@ echo "
 		</form>
 
 		<div class=\"picture\"> 
-                <table borde='1'>
+                <table border='1'>
 ";
 if(is_dir($dir_path))
 {
@@ -41,7 +41,7 @@ if(is_dir($dir_path))
           //  echo "File Extension-> $extension<br>";
             
            // check file extension
-            if(isset($extension) && in_array($extension, $extensions_array))
+            if(isset($extension) && in_array($extension, $extensions_array) && $extension != "")
             {
             echo "
 			<tr><td><img id='$i' src='$files[$i]' style='width:10%; height:10%;' onclick='showImageBig($i);'></button><tr><td>
