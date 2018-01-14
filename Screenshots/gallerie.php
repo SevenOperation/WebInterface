@@ -2,8 +2,8 @@
 <?php
 session_start();
 require_once '../testAdminContentInterface/htmlbuildHelper.php';
-$extrascipt=" \r\n function showImageBig(path , extension){"
-             ."\r\n window.location = '' + path + '.' + extension;"
+$extrascipt=" \r\n function showImageBig(id){"
+             ."\r\n window.location = document.getElementByID(id).src;"
              ."\r\n }";
 getHeaderExtraScript($extrascipt);
 getNormalBodyTop();
@@ -46,7 +46,7 @@ if(is_dir($dir_path))
             // show image
             echo "
 
-			<tr><td><button onclick='showImageBig(" . $file['filename']. ", $extension);'><img id='$i' src='$files[$i]' style='width:10%;height:10%;'></button><tr><td>
+			<tr><td><button onclick='showImageBig($i);'><img id='$i' src='$files[$i]' style='width:10%;height:10%;'></button><tr><td>
 			";
 			
             }
