@@ -1,16 +1,11 @@
 <?php
 include_once '/var/www/html/WebInterface/logs/logger.php';
+include_once '/var/www/html/WebInterface/ControlInterface/datenueberpruefung.php';
 
 function getNormalHeader(){
 logIP();
 getViewCounter();
 echo '<!DOCTYPE html>';
-session_name('WATGSESSID');
-session_start();
-if (isset($_COOKIE['benutzerdaten'])) {
-    $username = explode("-", $_COOKIE['benutzerdaten'])[0];
-    $password = explode("-", $_COOKIE['benutzerdaten'])[1];
-}
 echo "<html>" .
     "<head>" .
         "<meta charset='UTF-8'>".
@@ -47,8 +42,6 @@ function getHeaderExtraScript($extrascript){
 logIP();
 getViewCounter();
 echo '<!DOCTYPE html>';
-session_name('WATGSESSID');
-session_start();
 echo "<html>" .
     "<head>" .
         "<meta charset='UTF-8'>".
@@ -85,10 +78,9 @@ echo "<html>" .
 
 function getNormalBodyTop(){
 if (isset($_COOKIE['benutzerdaten'])) {
-     $username = explode("-", $_COOKIE['benutzerdaten'])[0];
-     $password = explode("-", $_COOKIE['benutzerdaten'])[1];
+    $username = explode("-", $_COOKIE['benutzerdaten'])[0];
+    $password = explode("-", $_COOKIE['benutzerdaten'])[1];
 }
-
 echo "<body style='background-image: url(/Logo_1.png);  background-size: cover;'>".
         "<div style='background-color: #24292e; padding-top: 12px; padding-bottom: 12px; line-height: 1.5 ;'>".
             "<div class='head' style='width: 52%; margin-left: auto; margin-right: auto; line-height: 1.5; font-size: 14px'>".
@@ -98,7 +90,7 @@ echo "<body style='background-image: url(/Logo_1.png);  background-size: cover;'
                     "<li><a href='/games'>Games</a></li>".
                     "<li><a href='/Announcements/announcement'>Ankündigungen</a></li>".
 		    "<li><a href='/teamspeak3'>Teamspeak3 Overview</a></li>";
-                     if (isset($_COOKIE['benutzerdaten']) && isset($_SESSION["angemeldet" . $username]) && $_SESSION["angemeldet" . $username] == true) {
+                     if (checkLoggedIn()) {
                      echo "</ul><ul style='margin: 0; list-style: none; float: right;'>
                      <li style='float: left'><a class='einloggenCss' onclick='userMenue()'><img src='./../uploads/0140.png' width='16' height='16'></img>" . $username . "</a></li>
                      </ul></div></div>";

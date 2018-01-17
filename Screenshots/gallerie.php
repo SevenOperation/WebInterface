@@ -2,6 +2,7 @@
 <?php
 session_start();
 require_once '../testAdminContentInterface/htmlbuildHelper.php';
+require_once '../ControlInterface/datenueberpruefung.php'
 $extrascipt=" \r\n function showImageBig(id){"
              ."\r\n window.location = document.getElementById(id).src;"
              ."\r\n }";
@@ -13,7 +14,7 @@ $_SESSION['screen_rights'] = "true";
 // wo die screenshots sind
 $dir_path = "."; 
 // Welche Dateien angezeigt werden sollen
-$extensions_array = array('jpg','png','jpeg','png','gif');
+$extensions_array = array('jpg','png','jpeg','png');
 echo "
 		<form action=\"logout.php\" method=\"post\">
 			<input id=\"logout\" type=\"submit\" value=\"Logout\">
@@ -61,7 +62,7 @@ echo " </table>
 }
 else {
 	echo "
-		<div id=\"error\">
+		<div id=\"error\" style='color: white'>
 			<h1>Du hast keinen Zugriff auf dieses Verzeichnis.</h1></br>
 			<h2>Bitte gebe das Passwort ein.</h2>
 			<form action='' method=\"post\">
