@@ -93,7 +93,7 @@ echo "<body style='background-image: url(/Logo_1.png);  background-size: cover;'
 		    "<li><a href='http://phantomrecords.de'>Music Partner</a></li>";
                      if (checkLoggedIn()) {
                      echo "</ul><ul style='margin: 0; list-style: none; float: right;'>
-                     <li style='float: left'><a class='einloggenCss' onclick='userMenue()'><img src='./../uploads/0140.png' width='16' height='16'></img>" . $username . "</a></li>
+                     <li style='float: left'><a class='einloggenCss' onclick='userMenue()'><img src='".getPicture()."' width='16' height='16'></img>" . $username . "</a></li>
                      </ul></div></div>";
                         echo "<div style='width: 50%; margin-left: auto; margin-right: auto; padding: 0;'>
                               <div style='position: absolute; z-index:2' id='login' class='drop2' align='center'>
