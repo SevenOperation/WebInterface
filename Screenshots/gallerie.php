@@ -8,7 +8,7 @@ $extrascipt=" \r\n function showImageBig(id){"
              ."\r\n }";
 getHeaderExtraScript($extrascipt);
 getNormalBodyTop();
-if(checkLoggedIn() && getPermission() == 2) {
+if(checkLoggedIn() && getPermission() >= 1) {
 // wo die screenshots sind
 $dir_path = "."; 
 // Welche Dateien angezeigt werden sollen
