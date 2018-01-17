@@ -19,7 +19,7 @@ global $daten;
 session_name('WATGSESSID');
 session_start();
 $db = new PDO('mysql:host=localhost;dbname=users', 'root', '');
-//var_dump($db->errorInfo());
+//var_dump($db->errorInfo())y
 $db->query('Set names utf8');
 $daten = $db->query('Select username , password from user ');
 }
@@ -78,6 +78,4 @@ function getPermission(){
 	return $permission['permission'];
 	}
 }
-
-
 ?>
