@@ -8,7 +8,7 @@ $extrascipt=" \r\n function showImageBig(id){"
 getHeaderExtraScript($extrascipt);
 getNormalBodyTop();
 $password = filter_input(INPUT_POST , "staffkey");
-if($password == "unreal" || $_SESSION['screen_rights'] = "true" ) {
+if($password == "unreal" || $_SESSION['screen_rights'] == "true" ) {
 $_SESSION['screen_rights'] = "true";
 // wo die screenshots sind
 $dir_path = "."; 
@@ -25,7 +25,9 @@ echo "
 if(is_dir($dir_path))
 {
     $files = scandir($dir_path);
-    
+
+   echo "<tr>";
+    $images = 0; 
     for($i = 0; $i < sizeof($files); $i++)
     {
         if($files[$i] !='.' && $files[$i] !='..')
@@ -43,12 +45,14 @@ if(is_dir($dir_path))
            // check file extension
             if(isset($extension) && in_array($extension, $extensions_array) && $extension != "")
             {
+            $images ++;
             echo "
-			<tr><td width='".  getimagesize($files[$i])[0] / 100 * 10 ."px'><img id='$i' src='$files[$i]' style='width: 100%; height:10%;' onclick='showImageBig($i);'></button></td></tr>";
-			
+			<td width='".  getimagesize($files[$i])[0] / 100 * 10 ."px'><img id='$i' src='$files[$i]' style='width: 100%; height:10%;' onclick='showImageBig($i);'></button></td>";
+            if(($images % 5) == 0) echo"</tr><tr>";
+	     
             }
         }
-    }
+    }echo "</tr>";
 }
 echo " </table>
 		</div> 
