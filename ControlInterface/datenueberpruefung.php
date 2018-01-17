@@ -78,4 +78,15 @@ function getPermission(){
 	return $permission['permission'];
 	}
 }
+
+function getPicture(){
+  $username = explode("-", $_COOKIE['benutzerdaten'])[0];
+  $password = explode("-", $_COOKIE['benutzerdaten'])[1];
+  $db = new PDO('mysql:host=localhost;dbname=users', 'root', '');
+        $db->query('Set names utf8');
+        $daten = $db->query("Select profilepicture from user where username = '$username' and password = '$password'" );
+        foreach ($daten as $path){
+        return $path['profilepicture']; 
+ }
+}
 ?>
