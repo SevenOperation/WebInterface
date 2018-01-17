@@ -5,7 +5,11 @@ session_start();
 $daten;
 
 if (isset($_POST['username']) && !checklogIn()){
+  if(isset($_POST['lastSide'])){
+  header('Location: ' . $_POST['lastSide']);
+  }else{
   header('Location: /index');
+  }
 }
   
 
@@ -40,8 +44,11 @@ return false;
 function setLoggedIn($username , $password, $logedIn){
   $_SESSION['angemeldet' . $username ] = true;
   setcookie('benutzerdaten', $username . "-" . $password, 0 , "/" );
-  echo "LoggedIn";
+   if(isset($_POST['lastSide'])){
+  header('Location: ' . $_POST['lastSide']);
+  }else{
   header('Location: /index');
+  }
 }
 
 
@@ -60,5 +67,17 @@ global $daten;
 }
 return false;
 }
+
+function getPermission(){
+        $username = explode("-", $_COOKIE['benutzerdaten'])[0];
+        $password = explode("-", $_COOKIE['benutzerdaten'])[1];
+ 	$db = new PDO('mysql:host=localhost;dbname=users', 'root', '');
+	$db->query('Set names utf8');
+	$daten = $db->query("Select permission from user where username = '$username' and password = '$password'" );
+        foreach ($daten as $permission){
+	return $permission['permission'];
+	}
+}
+
 
 ?>

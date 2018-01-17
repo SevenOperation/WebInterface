@@ -2,15 +2,13 @@
 <?php
 session_start();
 require_once '../testAdminContentInterface/htmlbuildHelper.php';
-require_once '../ControlInterface/datenueberpruefung.php'
+require_once '../ControlInterface/datenueberpruefung.php';
 $extrascipt=" \r\n function showImageBig(id){"
              ."\r\n window.location = document.getElementById(id).src;"
              ."\r\n }";
 getHeaderExtraScript($extrascipt);
 getNormalBodyTop();
-$password = filter_input(INPUT_POST , "staffkey");
-if($password == "unreal" || $_SESSION['screen_rights'] == "true" ) {
-$_SESSION['screen_rights'] = "true";
+if(checkLoggedIn() && getPermission() == 2) {
 // wo die screenshots sind
 $dir_path = "."; 
 // Welche Dateien angezeigt werden sollen
@@ -64,11 +62,7 @@ else {
 	echo "
 		<div id=\"error\" style='color: white'>
 			<h1>Du hast keinen Zugriff auf dieses Verzeichnis.</h1></br>
-			<h2>Bitte gebe das Passwort ein.</h2>
-			<form action='' method=\"post\">
-				<input type=\"text\" name=\"staffkey\">
-				<input type=\"submit\" value=\"Login\">
-			</form>
+			<h2>Entweder du bist nicht angemeldet oder dein Account hat nicht die Berechtigung.</h2>
 		</div>
 	</body>
 </html>
