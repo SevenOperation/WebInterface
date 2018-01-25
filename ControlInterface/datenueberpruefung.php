@@ -67,7 +67,7 @@ global $daten;
 }
 return false;
 }
-
+//Gets the user permission from mysql
 function getPermission(){
         $username = explode("-", $_COOKIE['benutzerdaten'])[0];
         $password = explode("-", $_COOKIE['benutzerdaten'])[1];
@@ -78,7 +78,7 @@ function getPermission(){
 	return $permission['permission'];
 	}
 }
-
+//Returns the picture path from user
 function getPicture(){
   $username = explode("-", $_COOKIE['benutzerdaten'])[0];
   $password = explode("-", $_COOKIE['benutzerdaten'])[1];
