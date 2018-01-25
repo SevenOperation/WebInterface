@@ -17,7 +17,7 @@ if (isset($daten) && isset($usern) && isset($pass) && isset($_POST["passwordw"])
         }
     }
     if($userexsits == false){
-      $daten = $db->query("INSERT INTO user (username , password , permission) VALUES ( '$usern'  , '$pass', '0')");
+      $daten = $db->query("INSERT INTO user (username , password , permission,profilepicture,rangID) VALUES ( '$usern'  , '$pass', '0','',99)");
       $login = true;
     }
    }

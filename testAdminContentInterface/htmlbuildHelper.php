@@ -100,6 +100,7 @@ echo "<body style='background-image: url(/Logo_1.png);  background-size: cover;'
                               <p><a style='color:black;' href='/ControlInterface/controlinterface'>WebInterface</a></p>
                               <p><a style='color:black;' href='/logout'>LogOut</a></p>
                               <p><a style='color:black;' href='/User/settings'>Settings</a></p>
+			      <p><a style='color:black;' href='/User/profile'>Profile</a></p>
                               </div></div>";
                     } else {
                         echo "</ul><ul style='margin: 0; list-style: none; float: right;'>
@@ -142,6 +143,14 @@ echo "<body style='background-image: url(/Logo_1.png);  background-size: cover;'
                         </form>
                     </div>";
                     }
+}
+
+
+function getForm($titel , $content){
+ echo "<div style='width: 52%; padding: 2%; margin: auto'><div style='padding: 2%; margin: auto; width: 100%; background-color: darkblue'>".
+      "<div  style='background-color: white'><p style='width: 100%; text-align: center'>".$titel."</p></div>".
+      "<div style='background-color: white;'><p style='width: 100%;'>".$content."</p></div>".
+      "</div>";
 }
 
 function getViewCounter(){
