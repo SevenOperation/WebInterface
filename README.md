@@ -19,9 +19,9 @@ Under News is the newest youtube video from your channel.
 I currently using it for my own website. https://www.wearethegamers.de
 
 # What has to be done
-Creating config files for specifying other mysql server and so one the mine currently
-include .htacess files I am currently now using the normal apache config file for authentication for the testAdminContentInterface
-Include a java programm for me which uses apache commen net to upload screenshots to the website (curently via ftp have to switch to http).
+Creating config files for specifying other mysql server and so on. 
+Have to include htacess files, because I am currently now using the normal apache config file for authentication for the testAdminContentInterface
+Have to include a java programm from me, which uses apache-commen-net to upload screenshots to the website curently via ftp.(have to switch to http).
 
 # How to you use it for you own purpose
 Currently you would have to modify nearly everything.
