@@ -64,4 +64,3 @@ return substr($text , $posa , $len);
 #$text = "haha client_nickname=SevenOperation ";
 #echo strpos($text, "client_nickname=");
 #echo strpos($text, " ",5);
-#echo substr($text ,21 , 14);
