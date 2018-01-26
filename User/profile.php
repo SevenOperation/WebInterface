@@ -14,7 +14,7 @@ getHeaderExtraScript($extrascript);
 getNormalBodyTop();
 $content = "<p>Username: <label>". explode('-',$_COOKIE['benutzerdaten'])[0] ."</label></p>".
 "<p>Password: <label>******</label></p>".
-"<form action='' method='POST'>".
+"<form action='changepassword' method='POST'>".
 "<p>New Password: <input type='password' name='password'/></p>".
 "<p>New Password repeat: <input type='password' name='passwordw' /></p>".
 "<p><button>Change Password</button></p>".
