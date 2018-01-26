@@ -99,7 +99,6 @@ echo "<body style='background-image: url(/Logo_1.png);  background-size: cover;'
                               <div style='position: absolute; z-index:2' id='login' class='drop2' align='center'>
                               <p><a style='color:black;' href='/ControlInterface/controlinterface'>WebInterface</a></p>
                               <p><a style='color:black;' href='/logout'>LogOut</a></p>
-                              <p><a style='color:black;' href='/User/settings'>Settings</a></p>
 			      <p><a style='color:black;' href='/User/profile'>Profile</a></p>
                               </div></div>";
                     } else {

@@ -26,7 +26,8 @@ $script = "\n function resizeIFrame(){".
 getHeaderExtraScript($script);
 getNormalBodyTop();
 $id="UhkgBR6Sd6Q"
-//GET https://www.googleapis.com/youtube/v3/search?part=snippet%2Cid&channelId=UChX1P_mHNWCcaa9oHvHiRAg&maxResults=1&order=date&key={YOUR_API_KEY}
+
+#echo GET https://www.googleapis.com/youtube/v3/search?part=snippet%2Cid&channelId=UChX1P_mHNWCcaa9oHvHiRAg&maxResults=1&order=date&key={YOUR_API_KEY};
 ?>
 <iframe id="youtube" width="854" height="480" src="https://www.youtube.com/embed/UhKgBR6SD6Q" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
                     </body>

@@ -1,6 +1,8 @@
 <?php
+include_once "/var/www/html/WebInterface/testAdminContentInterface/config.php";
 session_name('WATGSESSID');
 session_start();
+
 
 $daten;
 
@@ -15,13 +17,10 @@ if (isset($_POST['username']) && !checklogIn()){
 
 //Gets all data from every user for checking credentials
 function getUserData(){
-global $daten;
-session_name('WATGSESSID');
-session_start();
-$db = new PDO('mysql:host=localhost;dbname=users', 'root', '');
-//var_dump($db->errorInfo())y
+global $daten, $mysql_user_database, $mysqlserver, $mysql_user , $mysql_user_table, $mysql_user_password;
+$db = new PDO('mysql:host='.$mysqlserver.';dbname='.$mysql_user_database.'', $mysql_user, '');
 $db->query('Set names utf8');
-$daten = $db->query('Select username , password from user ');
+$daten = $db->query('Select username , password from '.$mysql_user_table.'');
 }
 
 
@@ -80,9 +79,10 @@ function getPermission(){
 }
 //Returns the picture path from user
 function getPicture(){
+  global $mysql_user_database, $mysqlserver, $mysql_user , $mysql_user_table, $mysql_user_password ;
   $username = explode("-", $_COOKIE['benutzerdaten'])[0];
   $password = explode("-", $_COOKIE['benutzerdaten'])[1];
-  $db = new PDO('mysql:host=localhost;dbname=users', 'root', '');
+  $db = new PDO('mysql:host='.$mysqlserver.';dbname='.$mysql_user_database.'', $mysql_user, $mysql_user_password);
         $db->query('Set names utf8');
         $daten = $db->query("Select profilepicture from user where username = '$username' and password = '$password'" );
         foreach ($daten as $path){
