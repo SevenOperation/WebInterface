@@ -1,5 +1,5 @@
 <?php
-include_once "/var/www/html/WebInterface/testAdminContentInterface/config.php";
+include_once "/var/www/html/WebInterface/AdminContentInterface/config.php";
 session_name('WATGSESSID');
 session_start();
 

@@ -153,14 +153,14 @@ function getForm($titel , $content){
 }
 
 function getViewCounter(){
-$counter = file_get_contents("/var/www/html/WebInterface/testAdminContentInterface/views");
+$counter = file_get_contents(_FILE_."/views");
 if(isset($counter)){
 $counter ++;
 }else{
 $counter = 1;
 }
 
-file_put_contents("/var/www/html/WebInterface/testAdminContentInterface/views",$counter);
+file_put_contents(_FILE_."/views",$counter);
 }
 ?>
 
