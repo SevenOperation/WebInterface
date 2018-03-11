@@ -1,0 +1,11 @@
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+TS3
+Welcome to the TeamSpeak 3 ServerQuery interface, type "help" for a list of commands and "help <command>" for information on a specific command.
+error id=0 msg=ok
+error id=0 msg=ok
+clid=1 cid=19 client_database_id=11 client_nickname=firesword23 client_type=0|clid=2 cid=33 client_database_id=2 client_nickname=SevenOperation\sfrom\s[::1]:49120 client_type=1
+error id=0 msg=ok
+error id=0 msg=ok
+
