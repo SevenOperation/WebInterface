@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-require_once '../testAdminContentInterface/htmlbuildHelper.php';
+require_once '../AdminContentInterface/htmlbuildHelper.php';
 session_name('WATGSESSID');
 session_start();
 $username = NULL;

@@ -1,13 +1,14 @@
 <?php
-
+require_once "AdminContentInterface/config.php";
 $resultN = "";
 $resultC = "1";
 $array = array();
 $position = 0;
 function auslesenHTML(){
-global $array , $resultC , $position, $resultN;
-$db = new PDO("sqlite:testAdminContentInterface/ts3server.sqlitedb");
-$ts_rooms = $db->query("Select * from channel_properties Where ident='channel_name' Order by id");
+global $array , $resultC , $position, $resultN, $path;
+$db = new PDO("sqlite:".$path."/ts3server.sqlitedb");
+$ts_rooms = $db->query("Select value from channel_properties Where ident='channel_name' Order by case when ident = 'channel_order' then value end");
+var_dump($db->errorInfo());
 $ts_names = $db->query("Select * from server_properties Where ident='virtualserver_name' AND id=1");
 foreach($ts_names as $ts_name){
 echo "<div style='color:white; width: 100%'>" . $ts_name["value"];
@@ -50,7 +51,7 @@ echo $r . "</div>";
 
 function getClientInfo($search,$start){
 global $position;
-$text = fread(fopen("testAdminContentInterface/clients", 'r'),filesize("testAdminContentInterface/clients"));
+$text = fread(fopen("AdminContentInterface/clients", 'r'),filesize("AdminContentInterface/clients"));
 $posa = strpos($text, $search , $start);
 if($posa === false){
 return false;

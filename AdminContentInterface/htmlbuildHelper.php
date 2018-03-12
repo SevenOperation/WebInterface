@@ -153,14 +153,14 @@ function getForm($titel , $content){
 }
 
 function getViewCounter(){
-$counter = file_get_contents(_FILE_."/views");
+$counter = file_get_contents(__DIR__."/views");
 if(isset($counter)){
 $counter ++;
 }else{
 $counter = 1;
 }
 
-file_put_contents(_FILE_."/views",$counter);
+file_put_contents(__DIR__."/views",$counter);
 }
 ?>
 

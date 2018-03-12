@@ -1,5 +1,5 @@
 <?php
-require_once "../testAdminContentInterface/htmlbuildHelper.php";
+require_once "../AdminContentInterface/htmlbuildHelper.php";
 require_once "../ControlInterface/datenueberpruefung.php";
 if(checkLoggedIn()){
 $extrascript = "\r\n function upload(){". 
