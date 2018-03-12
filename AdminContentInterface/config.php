@@ -1,5 +1,6 @@
 <?php
 $path="/var/www/html/WebInterface/AdminContentInterface";
+$logpath="/var/www/html";
 
 $mysql_user = "root"; //User which is used to connect to mysql database
 $mysql_user_password = "";//password form aboved mentioned user

@@ -1,7 +1,7 @@
 <?php
-require_once '/var/www/html/WebInterface/ControlInterface/datenueberpruefung.php';
+require_once __DIR__.'/../ControlInterface/datenueberpruefung.php';
 if(checkLoggedIn()){
-$target_dir = "/var/www/html/WebInterface/uploads/";
+$target_dir = __DIR__."/../uploads/";
 $target_file = $target_dir . basename(explode('-',$_COOKIE['benutzerdaten'])[0].".". explode(".",$_FILES['file']['name'])[1]);
 $uploadOk = 1 ;
 $filename =  basename(explode('-',$_COOKIE['benutzerdaten'])[0].".". explode(".",$_FILES['file']['name'])[1]);

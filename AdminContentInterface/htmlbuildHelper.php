@@ -1,6 +1,6 @@
 <?php
-include_once '/var/www/html/WebInterface/logs/logger.php';
-include_once '/var/www/html/WebInterface/ControlInterface/datenueberpruefung.php';
+include_once __DIR__.'/../logs/logger.php';
+include_once __DIR__.'/../ControlInterface/datenueberpruefung.php';
 
 function getNormalHeader(){
 logIP();
