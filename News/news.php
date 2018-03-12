@@ -14,7 +14,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
     $password = explode("-", $_COOKIE['benutzerdaten'])[1];
 }
 
-require_once '../testAdminContentInterface/htmlbuildHelper.php';
+require_once '../AdminContentInterface/htmlbuildHelper.php';
 $script = "\n function resizeIFrame(){".
 "\r\n var iFrame = document.getElementById('youtube');".
 "\r\n iFrame.width = document.body.scrollWidth;".

@@ -1,5 +1,5 @@
 <?php
-require_once "../testAdminContentInterface/config.php";
+require_once "../AdminContentInterface/config.php";
 require_once "../ControlInterface/datenueberpruefung.php";
 if(checkLoggedIn() && isset($_POST['password']) && isset($_POST['passwordw']) && $_POST['password'] == $_POST['passwordw']){
  $password = filter_input(INPUT_POST,"password",FILTER_SANITIZE_SPECIAL_CHARS);

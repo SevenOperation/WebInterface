@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
-require_once '../testAdminContentInterface/htmlbuildHelper.php';
+require_once '../AdminContentInterface/htmlbuildHelper.php';
 require_once '../ControlInterface/datenueberpruefung.php';
 $extrascipt=" \r\n function showImageBig(id){"
              ."\r\n window.location = document.getElementById(id).src;"

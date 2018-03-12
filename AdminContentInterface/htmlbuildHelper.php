@@ -1,6 +1,6 @@
 <?php
-include_once '/var/www/html/WebInterface/logs/logger.php';
-include_once '/var/www/html/WebInterface/ControlInterface/datenueberpruefung.php';
+include_once __DIR__.'/../logs/logger.php';
+include_once __DIR__.'/../ControlInterface/datenueberpruefung.php';
 
 function getNormalHeader(){
 logIP();
@@ -153,14 +153,14 @@ function getForm($titel , $content){
 }
 
 function getViewCounter(){
-$counter = file_get_contents("/var/www/html/WebInterface/testAdminContentInterface/views");
+$counter = file_get_contents(__DIR__."/views");
 if(isset($counter)){
 $counter ++;
 }else{
 $counter = 1;
 }
 
-file_put_contents("/var/www/html/WebInterface/testAdminContentInterface/views",$counter);
+file_put_contents(__DIR__."/views",$counter);
 }
 ?>
 

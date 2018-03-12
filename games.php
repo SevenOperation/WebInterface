@@ -1,6 +1,6 @@
 
 <?php 
-include_once 'testAdminContentInterface/htmlbuildHelper.php';
+include_once 'AdminContentInterface/htmlbuildHelper.php';
 session_name('WATGSESSID'); 
 session_start();
  
