@@ -5,6 +5,6 @@ TS3
 Welcome to the TeamSpeak 3 ServerQuery interface, type "help" for a list of commands and "help <command>" for information on a specific command.
 error id=0 msg=ok
 error id=0 msg=ok
-clid=2 cid=33 client_database_id=2 client_nickname=SevenOperation\sfrom\s[::1]:46314 client_type=1
+clid=1 cid=19 client_database_id=2 client_nickname=SevenOperation client_type=0|clid=2 cid=67 client_database_id=14 client_nickname=Marcel client_type=0|clid=5 cid=67 client_database_id=12 client_nickname=TakeThePower\/Thomas client_type=0|clid=7 cid=20 client_database_id=9 client_nickname=Luk client_type=0|clid=10 cid=19 client_database_id=6 client_nickname=SequenZz client_type=0|clid=11 cid=33 client_database_id=2 client_nickname=SevenOperation\sfrom\s[::1]:60534 client_type=1
 error id=0 msg=ok
 
