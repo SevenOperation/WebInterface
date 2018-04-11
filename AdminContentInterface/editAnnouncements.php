@@ -17,7 +17,7 @@ $extrascript = "\r\n function getAnnouncement(id){".
             "\r\n div.outerHTML += request.responseText;".
     "\r\n }".
     "\r\n }".
-    "\r\n request.open('POST', 'getAnnouncement', true);".
+    "\r\n request.open('POST', 'getEditAnnouncement', true);".
     "\r\n request.setRequestHeader('Content-type','application/x-www-form-urlencoded');".
     "\r\n request.send('id='+id);".
     "\r\n }".
@@ -34,7 +34,25 @@ $extrascript = "\r\n function getAnnouncement(id){".
     "\r\n request.open('POST', 'removeAnnouncements', true);".
     "\r\n request.setRequestHeader('Content-type','application/x-www-form-urlencoded');".
     "\r\n request.send('id='+id);".
-    "}";
+    "}".
+    "\r\n function updateAnnouncement(id){".
+        "\r\n if (document.getElementById(id + 'C') != null){".
+    "\r\n var request = new XMLHttpRequest();".
+     "\r\n request.onreadystatechange = function() {" .
+        "\r\n if (request.readyState == 4 && request.status == 200){".
+    	"\r\nalert('The Announcement has been updated.');".
+    "\r\n }".
+    "\r\n }".
+    "\r\n request.open('POST', 'updateAnnouncement', true);".
+    "\r\n request.setRequestHeader('Content-type','application/x-www-form-urlencoded');".
+    "\r\n request.send('text='+encodeURIComponent(document.getElementById(id+'CC').value) + '&id='+id)".
+    "\r\n }".
+    "\r\n} ";
+
+
+
+
+
 getHeaderExtraScript($extrascript);
 getNormalBodyTop($username);
 ?>
@@ -49,7 +67,8 @@ foreach($announcement_list as $announcement){
 echo "<tr id='$announcement[id]'><td>" .$announcement['id'] . "</td>";
 echo "<td>" . $announcement['titel']. "</td>";
 echo "<td><button onclick='getAnnouncement($announcement[id])'>Edit</button></td>";
-echo "<td><button onclick='removeAnnouncement($announcement[id])'>Delete</button></td></tr>";
+echo "<td><button onclick='removeAnnouncement($announcement[id])'>Delete</button></td>";
+echo "<td><button onclick='updateAnnouncement($announcement[id])'>Update</button></td></tr>";
 }
 ?>
 </div>
