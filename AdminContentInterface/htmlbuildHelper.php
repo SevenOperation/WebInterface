@@ -10,7 +10,7 @@ echo "<html>" .
     "<head>" .
         "<meta charset='UTF-8'>".
         "<title>Herzlich Wilkommen bei WeAreTheGamers</title>".
-        "<link rel='stylesheet' href='Style.css'>".
+        "<link rel='stylesheet' href='styles/default.css'>".
         "<script type='text/javascript'>".
             "function userMenue() {".
                 "if (document.getElementById('register')) {".
@@ -46,7 +46,7 @@ echo "<html>" .
     "<head>" .
         "<meta charset='UTF-8'>".
         "<title>Herzlich Wilkommen bei WeAreTheGamers</title>".
-        "<link rel='stylesheet' href='Style.css'>".
+        "<link rel='stylesheet' href='styles/default.css'>".
         "<script type='text/javascript'>".
             "function userMenue() {".
                 "if (document.getElementById('register')) {".
