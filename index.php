@@ -7,8 +7,10 @@ session_name('WATGSESSID');
 session_start();
 getNormalHeader();
 getNormalBodyTop();
+if(isset($_POST['wishlistforwebsite'])){
 $content = filter_input(INPUT_POST,'wishlistforwebsite',FILTER_SANITIZE_SPECIAL_CHARS);
 file_put_contents('wishlist.txt',$content . "\n",FILE_APPEND);
+}
 ?>
 <div style='width:100%'>
 <div style='width:33%; float: left;'>

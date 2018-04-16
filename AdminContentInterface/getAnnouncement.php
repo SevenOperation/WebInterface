@@ -2,9 +2,9 @@
 <head></head>
 <body>
 <?php
+require_once "Announcement.php";
 if(isset($_POST['id'])){
-    $db = new PDO('mysql:host=localhost;dbname=news', 'root', '');
-    $announcements = $db->query("Select * from announcement WHERE id=". $_POST['id'] ." ORDER BY id DESC");
+    $announcements = getAnnouncement($_POST['id']);
     if($announcements != FALSE && $announcements->rowCount() != 0){
     foreach ($announcements as $announcement){
         echo "<div id='".$announcement['id']."C'style='background-color: white;'>\r\n".
