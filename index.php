@@ -14,8 +14,8 @@ file_put_contents('wishlist.txt',$content . "\n",FILE_APPEND);
 ?>
 <div style='width:100%'>
 <div style='width:33%; float: left;'>
-<p><a href='https://www.youtube.com/channel/UChX1P_mHNWCcaa9oHvHiRAg'><img width='33%' src='youtube.png'></img></a></p>
-<p><a href='https://www.twitch.tv/watg_we_are_the_gamers'><img width='33%' src='twitch.png'></img></a></p>
+<p><a href='https://www.youtube.com/channel/UChX1P_mHNWCcaa9oHvHiRAg'><img width='33%' src='pictures/youtube.png'></img></a></p>
+<p><a href='https://www.twitch.tv/watg_we_are_the_gamers'><img width='33%' src='pictures/twitch.png'></img></a></p>
 <a href='/News/news'><img src=''></img>Or watch our newest Video on our Website here</a>
 </div>
 <div style='width:34%; margin: auto;'>

@@ -81,7 +81,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
     $username = explode("-", $_COOKIE['benutzerdaten'])[0];
     $password = explode("-", $_COOKIE['benutzerdaten'])[1];
 }
-echo "<body style='background-image: url(/Logo_1.png);  background-size: cover;'>".
+echo "<body style='background-image: url(pictures/Logo_1.png);  background-size: cover;'>".
         "<div style='background-color: #24292e; padding-top: 12px; padding-bottom: 12px; line-height: 1.5 ;'>".
             "<div class='head' style='width: 60%; margin-left: auto; margin-right: auto; line-height: 1.5; font-size: 14px'>".
                 "<ul style='margin-top: 0; list-style: none; float: left; padding-left: 0; margin-bottom: 0'>".
