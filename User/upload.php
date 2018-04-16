@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__.'/../ControlInterface/datenueberpruefung.php';
 if(checkLoggedIn()){
-$target_dir = __DIR__."/../uploads/";
+$target_dir = __DIR__."/profilepcitures/";
 $target_file = $target_dir . basename(explode('-',$_COOKIE['benutzerdaten'])[0].".". explode(".",$_FILES['file']['name'])[1]);
 $uploadOk = 1 ;
 $filename =  basename(explode('-',$_COOKIE['benutzerdaten'])[0].".". explode(".",$_FILES['file']['name'])[1]);
@@ -19,7 +19,7 @@ $username = explode('-',$_COOKIE['benutzerdaten'])[0];
         echo "The file ". $filename .  "has been uploaded.";
         $db = new PDO('mysql:host=localhost;dbname=users', 'root', '');
 	$db->query('Set names utf8');
-	$daten = $db->query("Update user set profilepicture='"."/uploads/" .$filename ."' where username = '" .$username. "'");
+	$daten = $db->query("Update user set profilepicture='". __DIR__ ."/profilepictures/" .$filename ."' where username = '" .$username. "'");
         var_dump($db->errorInfo());
     } else {
         echo "Sorry, there was an error uploading your file.";
