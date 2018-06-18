@@ -6,6 +6,7 @@ $clientArray = array(array());
 $channelArray = array();
 $position = 0;
 function auslesenHTML(){
+ popen("sh ".__DIR__."/getClients.sh","r");
 	echo "<div style='color:white; width: 100%'>";	
 	global $channelArray, $clientArray , $resultC , $position, $resultN, $path;
   	while($resultC !== false){
@@ -78,7 +79,7 @@ return preg_replace('/\\\\s/'," ",$test);
 
 function getClientInfo($search,$start){
 global $position;
-$text = fread(fopen(__DIR__."/clients", 'r'),filesize(__DIR__."/clients"));
+$text = htmlspecialchars(fread(fopen("clients", 'r'),filesize("clients")));
 $posa = strpos($text, $search , $start);
 if($posa === false){
 return false;
