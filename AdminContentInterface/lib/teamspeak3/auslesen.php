@@ -2,7 +2,7 @@
 require_once __DIR__."/../../config.php";
 $resultN = "";
 $resultC = "1";
-$clientArray = array();
+$clientArray = array(array());
 $channelArray = array();
 $position = 0;
 function auslesenHTML(){
@@ -11,9 +11,9 @@ function auslesenHTML(){
   	while($resultC !== false){
                 $resultC = getClientInfo("cid=",$position);
                 $resultN = getClientInfo("client_nickname=",$position);
-		if(strpos($resultN,"SevenOperation\sfrom\s[::1]")){
-		$clientArray[$resultC] = $resultN;
-		}else{
+		if(strpos($resultN,"serveradmin\sfrom\s[::1]") === false){
+                if(!isset($clientArray[$resultC])) $clientArray[$resultC] = array();
+		array_push($clientArray[$resultC],$resultN);
 		}
         }
 	$resultC = "1";	
@@ -24,24 +24,33 @@ function auslesenHTML(){
                 $channelArray[$resultC] = $resultN;
 		$spacer = explode("]",$resultN);
 		if(strpos($resultN,"cspacer")){
-		echo "<div id='$resultC'style='width:50%; margin: auto; text-align: center'><p>$spacer[1]</p>" .(( isset($clientArray[$resultC]) )? "<p>" .$clientArray[$resultC]." </p>": "")  . "</div>";
+		echo "<div id='$resultC'style='width:50%; margin: auto; text-align: center'><p>$spacer[1]</p>" .getClientsInChannel($resultC). "</div>";
 		}
 		elseif(strpos($resultN,"*spacer")){
 		echo "<div id='$resultC'style='margin: auto;'><p>";
 		for($i = 0; $i < 200; $i++){
 		echo "$spacer[1]";
 		}
-		echo "</p>" .(( isset($clientArray[$resultC]) )? "<p>" .$clientArray[$resultC]." </p>": "")  . "</div>";
+		echo "</p>" .getClientsInChannel($resultC). "</div>";
 		}elseif(strpos($resultN,"spacer")){
-                echo "<div id='$resultC'style='width:50%; margin: auto; height: 19px'>" .(( isset($clientArray[$resultC]) )? "<p>" .$clientArray[$resultC]." </p>": "")  . "</div>";
+                echo "<div id='$resultC'style='width:50%; margin: auto; height: 19px'>". getClientsInChannel($resultC) . "</div>";
 		}else{
-		echo "<div id='$resultC' style='color:white; width: 100%'><p>$resultN</p>" .(( isset($clientArray[$resultC]) )? "<p>" .$clientArray[$resultC]." </p>": "")  . "</div>";
+		echo "<div id='$resultC' style='color:white; width: 100%'><p>$resultN</p>" . getClientsInChannel($resultC)  . "</div>";
 		}
         }
 	echo "</div>";
 
 	}
 
+
+function getClientsInChannel($channelid){
+ global $clientArray;
+ if(isset($clientArray[$channelid])){
+ foreach ($clientArray[$channelid] as $client){
+   echo "<p style='font-size: 12px; margin-left: 1%'>".$client."</p>";
+ }
+}
+}
 
 
 function getChannelInfo($search,$start){
