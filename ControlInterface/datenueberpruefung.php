@@ -41,10 +41,14 @@ return false;
 
 //Set the cookies and Session if he was authenticated successfully
 function setLoggedIn($username , $password, $logedIn){
-  $_SESSION['angemeldet' . $username ] = true;
+session_name('WATGSESSID');
+session_start();
+  $base64_user = base64_encode("$username:$password");
+  $_SESSION['WATGSESSID'] = $base64_user;
   setcookie('benutzerdaten', $username . "-" . $password, 0 , "/" );
    if(isset($_POST['lastSide'])){
   header('Location: ' . $_POST['lastSide']);
+  echo "test";
   }else{
   header('Location: /index');
   }

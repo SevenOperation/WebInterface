@@ -2,13 +2,12 @@
 <head></head>
 <body>
 <?php
+require_once __DIR__."/../AdminContentInterface/lib/announcement.php";
 if(isset($_GET['id'])){
-    $db = new PDO('mysql:host=localhost;dbname=news', 'root', '');
-    $comments = $db->query("Select * from comments WHERE annoucementID=". $_GET['id'] ." ORDER BY id DESC");
-    $db = new PDO('mysql:host=localhost;dbname=users', 'root', '');
+    $comments = queryMYSQL("news","localhost","root","Select * from comments WHERE annoucementID=". $_GET['id'] ." ORDER BY id DESC");
     if($comments != FALSE && $comments->rowCount() != 0){
     foreach ($comments as $comment){
-        $creator = $db->query("Select u.username , u.profilepicture, r.rangname from user u , rang r WHERE u.id=". $comment['userID'] ." AND u.rangID= r.id ORDER BY u.id DESC");
+        $creator = queryMYSQL("users","localhost","root","Select u.username , u.profilepicture, r.rangname from user u , rang r WHERE u.id=". $comment['userID'] ." AND u.rangID= r.id ORDER BY u.id DESC");
         $creatorS = "Unknown (Guest)";
         $picture = "";
         $rang = "";
