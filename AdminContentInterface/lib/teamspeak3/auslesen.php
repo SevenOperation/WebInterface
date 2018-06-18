@@ -45,10 +45,15 @@ function auslesenHTML(){
 
 function getClientsInChannel($channelid){
  global $clientArray;
+ $html = "";
  if(isset($clientArray[$channelid])){
  foreach ($clientArray[$channelid] as $client){
-   echo "<p style='font-size: 12px; margin-left: 1%'>".$client."</p>";
+  $client = preg_replace('/\\\\s/'," ",$client);
+  $client = preg_replace('/\\\\p/',"|",$client);
+  $client = preg_replace('/\\\\/',"",$client); 
+  $html .= "<p style='font-size: 12px; margin-left: 1%'>".$client."</p>";
  }
+ return $html;
 }
 }
 
