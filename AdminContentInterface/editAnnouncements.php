@@ -54,7 +54,7 @@ $extrascript = "\r\n function getAnnouncement(id){".
 
 
 getHeaderExtraScript($extrascript);
-getNormalBodyTop($username);
+getNormalBodyTop(NULL);
 ?>
 <div style='padding-top: 2%; padding-bottom: 2%; margin: auto; width: 52%; padding-left: 2%; padding-right: 2% '>
 <div style="background-color: darkblue; padding-top: 1%; padding-right: 2%; padding-left: 2%; padding-bottom: 2%">
