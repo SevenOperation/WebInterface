@@ -6,7 +6,7 @@ include_once $path.'/auslesen.php';
 session_name('WATGSESSID');
 session_start();
 getNormalHeader();
-getNormalBodyTop();
+getNormalBodyTop(NULL);
 if(isset($_POST['wishlistforwebsite'])){
 $content = filter_input(INPUT_POST,'wishlistforwebsite',FILTER_SANITIZE_SPECIAL_CHARS);
 file_put_contents('wishlist.txt',$content . "\n",FILE_APPEND);

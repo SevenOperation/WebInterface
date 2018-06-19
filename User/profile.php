@@ -11,7 +11,7 @@ $extrascript = "\r\n function upload(){".
 " \r\n req.send(formData);".
 " \r\n } ";
 getHeaderExtraScript($extrascript);
-getNormalBodyTop();
+getNormalBodyTop(NULL);
 $content = "<p>Username: <label>". explode('-',$_COOKIE['benutzerdaten'])[0] ."</label></p>".
 "<p>Password: <label>******</label></p>".
 "<form action='changepassword' method='POST'>".
