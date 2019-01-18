@@ -7,7 +7,7 @@
 # What the Interface should be
 It should be a Website which gives you as the owner the abillity to create Announcements.
 Other people can visit it create an account or not, create comments while logged in (then with their user name and profile picture) or as a Guest.
-They also can see you newest youtube video and see what is going on yout teamspeak server.
+They also can see you newest youtube video and see what is going on, on your teamspeak server.
 Also their is a gallerie where you can put screenshots so others can view it.
 
 # What is there right now
