@@ -24,7 +24,7 @@ $script = "\n function resizeIFrame(){".
 "\r\n resizeIFrame();".
 "\r\n });";
 getHeaderExtraScript($script);
-getNormalBodyTop();
+getNormalBodyTop(NULL);
 $id="UhkgBR6Sd6Q"
 
 #echo GET https://www.googleapis.com/youtube/v3/search?part=snippet%2Cid&channelId=UChX1P_mHNWCcaa9oHvHiRAg&maxResults=1&order=date&key={YOUR_API_KEY};

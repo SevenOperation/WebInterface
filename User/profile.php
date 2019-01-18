@@ -11,13 +11,16 @@ $extrascript = "\r\n function upload(){".
 " \r\n req.send(formData);".
 " \r\n } ";
 getHeaderExtraScript($extrascript);
-getNormalBodyTop();
+getNormalBodyTop(NULL);
 $content = "<p>Username: <label>". explode('-',$_COOKIE['benutzerdaten'])[0] ."</label></p>".
 "<p>Password: <label>******</label></p>".
 "<form action='changepassword' method='POST'>".
 "<p>New Password: <input type='password' name='password'/></p>".
 "<p>New Password repeat: <input type='password' name='passwordw' /></p>".
 "<p><button>Change Password</button></p>".
+"</form>".
+"<form>".
+"<p>Newsletter: <input type='checkbox' name='newsletter' value='1' checked /></p>".
 "</form>".
 "<p><img style='border: 5px solid' width='256' height='256' src='".getPicture()."'></img></p>".
 "<p>Select image to upload: <input type='file' name='fileToUpload' id='fileToUpload'></p>".

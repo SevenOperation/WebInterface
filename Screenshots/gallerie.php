@@ -7,7 +7,7 @@ $extrascipt=" \r\n function showImageBig(id){"
              ."\r\n window.location = document.getElementById(id).src;"
              ."\r\n }";
 getHeaderExtraScript($extrascipt);
-getNormalBodyTop();
+getNormalBodyTop(NULL);
 if(checkLoggedIn() && getPermission() >= 1) {
 // wo die screenshots sind
 $dir_path = "."; 

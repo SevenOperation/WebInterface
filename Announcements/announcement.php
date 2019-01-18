@@ -45,7 +45,7 @@ $extrascipt = "\r\n function showComments(id){".
     "\r\n request.send('');".
     "\r\n }";
 getHeaderExtraScript($extrascipt);
-getNormalBodyTop($username);
+getNormalBodyTop(NULL);
 $db = new PDO('mysql:host=localhost;dbname=news', 'root', '');
 $announcements = $db->query("Select * from announcement ORDER BY id DESC");
 if(isset($announcements)){

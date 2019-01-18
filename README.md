@@ -12,7 +12,7 @@ Also their is a gallerie where you can put screenshots so others can view it.
 
 # What is there right now
 Announcements can be created and comments
-Users can create accounts,login and uploading an profile, picture.
+Users can create accounts,login and uploade a profile, picture.
 Others can see the profile picture in the comments.
 A Teamspeak Overview Page shows you all rooms currently on your Server.
 Under News is the newest youtube video from your channel.

@@ -9,7 +9,7 @@ if (isset($_COOKIE['benutzerdaten'])) {
     $password = explode("-", $_COOKIE['benutzerdaten'])[1];
 }
  getNormalHeader();
- getNormalBodyTop();
+ getNormalBodyTop("/pictures/games.jpg");
  ?>
                     </body>
                     </html>
