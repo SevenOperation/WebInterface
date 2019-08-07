@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>var connection = new WebSocket("wss://www.wearethegamers.de:8765");
+var id=0;
+connection.onopen = function(){
+ connection.send('{"message":""}');
+};
+connection.onerror = function(error){
+console.log('WebSocket Error' + error);
+};
+connection.onmessage = function (e){
+console.log('Server:' + e.data);
+var div = document.getElementById('chatBox');
+var mid = id+"m";
+if(div.scrollTop == div.scrollHeight - div.clientHeight){
+div.innerHTML += '<div id="'+mid+'" >'+e.data+'</div>';
+div.scrollTop = div.scrollHeight;
+}else{
+div.innerHTML += '<div id="'+mid+'">'+e.data+'</div>';
+}
+window.setTimeout(deleteMessage,10000, mid);
+id++;
+}
+function deleteMessage(mid){
+var element = document.getElementById(mid);
+element.parentNode.removeChild(element);
+}
+</script>
+</head>
+<body>
+<div id="chatBox" class="chatBoxCss">
+</div>
+</body>
+</html>

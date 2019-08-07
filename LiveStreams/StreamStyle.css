@@ -1,0 +1,64 @@
+main {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(50em, 2fr));
+  color: black;
+}
+Tidel{
+	display: block;
+	box-shadow: 0px 20px 20px 0px #00000029;
+	
+}
+main > section {
+  padding: 1em;
+  background: hsla(0, 0%, 89%, 0.21);
+  box-shadow: 0px 20px 20px 0px #00000029;
+}
+main2 {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(10em, 2fr));
+  color: black;
+}
+main2 > section {
+	padding: 1em;
+	background: hsla(0, 0%, 89%, 0.21);
+  box-shadow: 0px 20px 20px 0px #00000029;
+}
+
+User	{
+	font-size: 60px;
+	text-size-adjust: 100%;
+}
+StreamTitle{
+	font-size: 60px;
+	text-size-adjust: 100%;
+}
+seperator{
+	font-size: 60px;
+	text-size-adjust: 100%;
+}
+img.stream{
+    margin: auto;
+    width: -webkit-fill-available;
+}
+img.Icon {
+
+height: 100;
+
+width: 100;
+
+top: 1em;
+}
+.player{
+  max-width: 100%;
+  height: auto;
+}
+
+div.chatBoxCss{
+ width:90%;
+ height: 80%;
+ overflow: scroll;
+}
+
+
