@@ -3,11 +3,6 @@
 require_once '../AdminContentInterface/htmlbuildHelper.php';
 session_name('WATGSESSID');
 session_start();
-$username = NULL;
-if (isset($_COOKIE['benutzerdaten'])) {
-    $username = explode("-", $_COOKIE['benutzerdaten'])[0];
-    $password = explode("-", $_COOKIE['benutzerdaten'])[1];
-}
 $extrascipt = "\r\n function showComments(id){".
         "\r\n if (document.getElementsByName(id + 'C').length != 0){".
          "\r\n var elemente = document.getElementsByName(id + 'C');".

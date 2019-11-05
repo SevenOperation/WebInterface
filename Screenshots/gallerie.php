@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <?php
-session_start();
 require_once '../AdminContentInterface/htmlbuildHelper.php';
-require_once '../ControlInterface/datenueberpruefung.php';
+require_once '../AdminContentInterface/lib/user.php';
 $extrascipt=" \r\n function showImageBig(id){"
              ."\r\n window.location = document.getElementById(id).src;"
              ."\r\n }";
 getHeaderExtraScript($extrascipt);
 getNormalBodyTop(NULL);
-if(checkLoggedIn() && getPermission() >= 1) {
+if(checkLoggedIn() && getPermission() <= 1) {
 // wo die screenshots sind
 $dir_path = "."; 
 // Welche Dateien angezeigt werden sollen
 $extensions_array = array('jpg','png','jpeg','png');
-echo "
-		<form action=\"logout.php\" method=\"post\">
-			<input id=\"logout\" type=\"submit\" value=\"Logout\">
-		</form>
-
-		<div class=\"picture\"> 
-                <table border='1'>
-";
+echo "<div class=\"picture\"> 
+      <table border='1'>";
 if(is_dir($dir_path))
 {
     $files = scandir($dir_path);
@@ -31,16 +24,11 @@ if(is_dir($dir_path))
     {
         if($files[$i] !='.' && $files[$i] !='..')
         {
-            // get file name
-           // echo "File Name -> $files[$i]<br>";
-            
             // get file extension
             $file = pathinfo($files[$i]);
             if(isset($file['extension'])){
             $extension = $file['extension'];
             }
-          //  echo "File Extension-> $extension<br>";
-            
            // check file extension
             if(isset($extension) && in_array($extension, $extensions_array) && $extension != "")
             {

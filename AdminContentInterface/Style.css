@@ -17,6 +17,7 @@ body{
 }
 div{
 	box-sizing: border-box;
+	font-size: 14px;
 }
 a{
 	text-decoration: none;
@@ -64,4 +65,9 @@ li{
 }
 .table{
 	float: right;
+}
+
+div.player-test{
+  max-width: 100%;
+  height: auto;
 }

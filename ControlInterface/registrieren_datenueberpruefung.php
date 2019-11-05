@@ -1,5 +1,6 @@
 <?php
 session_start();
+#phpinfo();
 $db = new PDO('mysql:host=localhost;dbname=users', 'root', '');
 $db->query('Set names utf8');
 $daten = $db->query('Select username , password from user ');
@@ -17,7 +18,8 @@ if (isset($daten) && isset($usern) && isset($pass) && isset($_POST["passwordw"])
         }
     }
     if($userexsits == false){
-      $daten = $db->query("INSERT INTO user (username , password , permission,profilepicture,rangID) VALUES ( '$usern'  , '$pass', '0','',99)");
+      $pass = password_hash($pass,PASSWORD_DEFAULT);
+      $daten = $db->query("INSERT INTO user (username , password , permission,profilepicture,rangID) VALUES ( '$usern'  , '$pass', '99','',99)");
       $login = true;
     }
    }

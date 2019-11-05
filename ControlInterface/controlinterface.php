@@ -2,12 +2,8 @@
 <?php
 session_name("WATGSESSID");
 session_start();
-if (!isset($_SESSION['angemeldet' . $_COOKIE['user']]) || $_SESSION['angemeldet' . $_COOKIE['user']] != true) {
+if (!isset($_SESSION['WATGSESSID'])) {
     header('Location: /index');
-}
-if (isset($_COOKIE['benutzerdaten'])) {
-    $username = explode("-", $_COOKIE['benutzerdaten'])[0];
-    $password = explode("-", $_COOKIE['benutzerdaten'])[1];
 }
 ?>
 

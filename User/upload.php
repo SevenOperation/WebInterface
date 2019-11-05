@@ -1,12 +1,11 @@
 <?php
-require_once __DIR__.'/../ControlInterface/datenueberpruefung.php';
+require_once __DIR__.'/../AdminContentInterface/lib/user.php';
 if(checkLoggedIn()){
-$target_dir = __DIR__."/profilepcitures/";
-$target_file = $target_dir . basename(explode('-',$_COOKIE['benutzerdaten'])[0].".". explode(".",$_FILES['file']['name'])[1]);
+$target_dir = __DIR__."/profilepictures/";
+$target_file = $target_dir . basename(getUsername().".". explode(".",$_FILES['file']['name'])[1]);
 $uploadOk = 1 ;
-$filename =  basename(explode('-',$_COOKIE['benutzerdaten'])[0].".". explode(".",$_FILES['file']['name'])[1]);
+$filename =  basename(getUsername().".". explode(".",$_FILES['file']['name'])[1]);
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-$username = explode('-',$_COOKIE['benutzerdaten'])[0];
 // Check if image file is a actual image or fake image
     $check = getimagesize($_FILES["file"]["tmp_name"]);
     if($check !== false) {
@@ -19,7 +18,7 @@ $username = explode('-',$_COOKIE['benutzerdaten'])[0];
         echo "The file ". $filename .  "has been uploaded.";
         $db = new PDO('mysql:host=localhost;dbname=users', 'root', '');
 	$db->query('Set names utf8');
-	$daten = $db->query("Update user set profilepicture='". __DIR__ ."/profilepictures/" .$filename ."' where username = '" .$username. "'");
+	$daten = $db->query("Update user set profilepicture='/User/profilepictures/" .$filename ."' where id = '" .$_SESSION['WATGSESSID']."'");
         var_dump($db->errorInfo());
     } else {
         echo "Sorry, there was an error uploading your file.";

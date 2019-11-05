@@ -12,6 +12,20 @@ getNormalBodyTop(NULL);
 <div style="background-color: darkblue; padding-top: 1%; padding-right: 2%; padding-left: 2%; padding-bottom: 2%">
 <form action='' method='POST'>
 <div style='background-color: white;'>
+<p>Database:</p>
+<select name="database">
+<?php
+$db = new PDO('mysql:host=localhost;', 'root', '');
+$r = $db->query("show databases");
+foreach ($r as $d){ 
+ echo "<option value='".$d['Database']."'>".$d['Database']."</option>";
+  #<option value="volvo">Volvo</option>
+  #<option value="saab">Saab</option>
+  #<option value="fiat">Fiat</option>
+  #<option value="audi">Audi</option>
+ }
+?>
+</select> 
 <p>Title:</p>
 <input name='titel' type=text style='width: 100%; text-align: center; margin: auto; box-sizing: border-box'></input>
 </div>
@@ -30,8 +44,9 @@ getNormalBodyTop(NULL);
 <?php
 $titel = $_POST['titel'];
 $content = $_POST['content'];
-if(isset($titel) && isset($content)){
-$db = new PDO('mysql:host=localhost;dbname=news', 'root', '');
+$database = $_POST['database'];
+if(isset($titel) && isset($content) && isset($database)){
+$db = new PDO('mysql:host=localhost;dbname='.$database.'', 'root', '');
 $db->query("INSERT INTO announcement (titel , content ) VALUES ('$titel','$content')");
 }
 ?>

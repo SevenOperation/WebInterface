@@ -3,8 +3,8 @@ import smtplib
 import MySQLdb
 import sys
 
-sender = sys.argv[0]
-mail_domain = sys.argv[1]
+sender = sys.argv[1]
+mail_domain = sys.argv[2]
 data = open("layout_mail.html",'r')
 server = smtplib.SMTP("127.0.0.1",25,"mail_domain",10)
 server.set_debuglevel(1)

@@ -1,0 +1,6 @@
+.headline {
+  display: grid; 
+  grid-template-rows: 200px 1fr 100px; 
+  grid-template-columns: 25% 25% 25% 25%; 
+  grid-auto-flow: column;
+}

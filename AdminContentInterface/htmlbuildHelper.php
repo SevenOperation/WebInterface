@@ -1,6 +1,6 @@
 <?php
 include_once __DIR__.'/../logs/logger.php';
-include_once __DIR__.'/../ControlInterface/datenueberpruefung.php';
+include_once __DIR__.'/lib/user.php';
 
 function getNormalHeader(){
 logIP();
@@ -9,6 +9,7 @@ echo '<!DOCTYPE html>';
 echo "<html>" .
     "<head>" .
         "<meta charset='UTF-8'>".
+        "<meta name='viewport' content='width=device-width, initial-scale=1' />".
         "<title>Herzlich Wilkommen bei WeAreTheGamers</title>".
         "<link rel='stylesheet' href='/styles/default.css'>".
         "<script type='text/javascript'>".
@@ -38,13 +39,27 @@ echo "<html>" .
     "</head>";
 }
 
+function getUserMenu(){
+	echo "</ul><ul style='margin: 0; list-style: none; float: right;'>
+              <li style='float: left'><a class='einloggenCss' onclick='userMenue()'><img src='".getPicture()."' width='16' height='16'></img>" .getUsername(). "</a></li>
+              </ul></div></div>";
+        echo "<div style='width: 50%; margin-left: auto; margin-right: auto; padding: 0;'>
+              <div style='position: absolute; z-index:2' id='login' class='drop2' align='center'>
+              <p><a style='color:black;' href='/ControlInterface/controlinterface'>WebInterface</a></p>
+              <p><a style='color:black;' href='/logout'>LogOut</a></p>
+              <p><a style='color:black;' href='/User/profile'>Profile</a></p>
+              <p><a style='color:black;' href='/Screenshots/gallerie.php'>Gallary</a></p>
+              </div></div>";
+}
+
 function getHeaderExtraScript($extrascript){
 logIP();
 getViewCounter();
 echo '<!DOCTYPE html>';
 echo "<html>" .
     "<head>" .
-        "<meta charset='UTF-8'>".
+        "<meta charset='UTF-8' >".
+        "<meta name='viewport' content='width=device-width, initial-scale=1.0' />".
         "<title>Herzlich Wilkommen bei WeAreTheGamers</title>".
         "<link rel='stylesheet' href='/styles/default.css'>".
         "<script type='text/javascript'>".
@@ -77,40 +92,29 @@ echo "<html>" .
 }
 
 function getNormalBodyTop($background){
-if (isset($_COOKIE['benutzerdaten'])) {
-    $username = explode("-", $_COOKIE['benutzerdaten'])[0];
-    $password = explode("-", $_COOKIE['benutzerdaten'])[1];
-}
 if(!isset($background)){
 $background = "/pictures/Logo_1.png";
 }
-echo "<body style='background-image: url($background);  background-size: cover;'>".
-        "<div style='background-color: #24292e; padding-top: 12px; padding-bottom: 12px; line-height: 1.5 ;'>".
-            "<div class='head' style='width: 60%; margin-left: auto; margin-right: auto; line-height: 1.5; font-size: 14px'>".
+echo "<body id='body' style='background-image: url($background);  background-size: cover;'>".
+        "<div style='background-color: #24292e; padding-top: 12px; padding-bottom: 12px; line-height: 1.5;'>".
+            "<div class='head' style='width: 60%; margin-left: auto; margin-right: auto; line-height: 1.5;'>".
                 "<ul style='margin-top: 0; list-style: none; float: left; padding-left: 0; margin-bottom: 0'>".
                     "<li><a href='/index'>Startseite</a></li>".
                     "<li><a href='/News/news'>News</a></li>".
                     "<li><a href='/games'>Games</a></li>".
                     "<li><a href='/Announcements/announcement'>Ankündigungen</a></li>".
 		    "<li><a href='/teamspeak3'>Teamspeak3 Overview</a></li>".
+		    "<li><a href='/LiveStreams/index'>LiveStreams</a></li>".
 		    "<li><a href='http://phantomrecords.de'>Music Partner</a></li>";
-                     if (checkLoggedIn()) {
-                     echo "</ul><ul style='margin: 0; list-style: none; float: right;'>
-                     <li style='float: left'><a class='einloggenCss' onclick='userMenue()'><img src='".getPicture()."' width='16' height='16'></img>" . $username . "</a></li>
-                     </ul></div></div>";
-                        echo "<div style='width: 50%; margin-left: auto; margin-right: auto; padding: 0;'>
-                              <div style='position: absolute; z-index:2' id='login' class='drop2' align='center'>
-                              <p><a style='color:black;' href='/ControlInterface/controlinterface'>WebInterface</a></p>
-                              <p><a style='color:black;' href='/logout'>LogOut</a></p>
-			      <p><a style='color:black;' href='/User/profile'>Profile</a></p>
-                              </div></div>";
+                     if (checkLoggedIn() || logIn() ) {
+			getUserMenu();
                     } else {
                         echo "</ul><ul style='margin: 0; list-style: none; float: right;'>
                     <li style='float: left'><a class='einloggenCss' onclick='userMenue()'>Einloggen</a></li>
                     <li style='float: left'><a class='einloggenCss' onclick='registerUser()'>Registrieren</a></li>
                     </ul></div><div style='width: 52%; margin-left: auto; margin-right: auto;'>
                         <div id='login' style='width: 340px;' class='drop2' align='center'>
-                            <form action='/ControlInterface/datenueberpruefung' method='post'>
+                            <form action='' method='post'>
                                 <p><input class='input' id='username' name='username' type='text' placeholder='Username'/></p>
                                 <p><input class='input' id='password' name='password' type='password' placeholder='Password'/></p>
                                 <p><button type='submit'>Einloggen</button></p>

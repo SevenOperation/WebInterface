@@ -17,6 +17,7 @@ body{
 }
 div{
 	box-sizing: border-box;
+	font-size: 14px;
 }
 a{
 	text-decoration: none;
@@ -65,3 +66,18 @@ li{
 .table{
 	float: right;
 }
+ .nav-header{
+    background-color: #24292e;
+    width:  200px;
+    position:absolute ;
+    left: 0px;
+    top: initial;
+    height: 100%
+
+}
+.navigation{
+
+    background-color: black;
+    text-decoration: none;
+}
+

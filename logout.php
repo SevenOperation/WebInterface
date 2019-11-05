@@ -1,6 +1,7 @@
 <?php
 session_name('WATGSESSID');
 session_start();
+session_destroy();
 setcookie("benutzerdaten", NULL);
 header('Location: /index');
 /* 
