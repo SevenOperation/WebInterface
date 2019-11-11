@@ -1,23 +1,45 @@
 <?php
-require_once __DIR__."/../../config.php";
+require_once __DIR__."/config.php";
 $resultN = "";
 $resultC = "1";
-$clid = "";
 $clientArray = array(array());
 $channelArray = array();
 $position = 0;
-function auslesenHTML(){
- popen("sh ".__DIR__."/getClients.sh","r");
+
+
+//This method returns a small javascript which repeates the character in a *spacer, onload of the window, until the end of the screen width is reached
+function getJavaScript(){
+return "\r\n window.onload = function() {
+repeat_char();
+} 
+function repeat_char(){ 
+var to_repeat = document.getElementsByClassName('repeated');
+var finalstring = '';
+for(var x = 0; x < to_repeat.length; x++) {
+var size = parseFloat(window.getComputedStyle(to_repeat[x],null).getPropertyValue('font-size')) * 2; 
+var repeat = parseInt(document.getElementById('teamspeak-overview').offsetWidth / size);
+finalstring = '';
+var char = to_repeat[x].innerHTML;
+for (var y = 0; y < repeat; y++) { 
+finalstring += char; } 
+to_repeat[x].innerHTML = finalstring }
+}";
+}
+
+
+//this an the method above are the only ones you need to call from outside
+function parseToHTML(){
+ global $adminname , $admin_password;
+ popen("sh ".__DIR__."/getClients.sh  $adminname $admin_password","r");
+ popen("sh ".__DIR__."/getChannels.sh $adminname $admin_password","r");
 	echo "<div id='teamspeak-overview' style='color:white; width: 100%'>";	
-	global $channelArray, $clientArray , $resultC , $position, $resultN, $path, $clid;
+	global $channelArray, $clientArray , $resultC , $position, $resultN, $path;
   	while($resultC !== false){
-                $clid = getClientInfo("clid=",$position);
                 $resultC = getClientInfo("cid=",$position);
                 $resultN = getClientInfo("client_nickname=",$position);
 		if(strpos($resultN,"serveradmin") === false){
-                	if(!isset($clientArray[$resultC])) $clientArray[$resultC] = array();
-			array_push($clientArray[$resultC],$resultN);
-			//array_push($clientArray[$resultC],$clid);
+                if(!isset($clientArray[$resultC])) $clientArray[$resultC] = array();
+		array_push($clientArray[$resultC],$resultN);
 		}
         }
 	$resultC = "1";	
@@ -32,14 +54,12 @@ function auslesenHTML(){
 		}
 		elseif(strpos($resultN,"*spacer")){
 		echo "<div id='$resultC'style='margin: auto;'><p class='repeated' style='font-family:Times New Roman'>";
-		#for($i = 0; $i < 200; $i++){
 		echo "$spacer[1]";
-		#}
 		echo "</p>" .getClientsInChannel($resultC). "</div>";
 		}elseif(strpos($resultN,"spacer")){
                 echo "<div id='$resultC'style='width:50%; margin: auto; height: 19px'>". getClientsInChannel($resultC) . "</div>";
 		}else{
-		echo "<div id='$resultC' style='color:white; width: 100%'><a href='ts3server://ts3.wearethegamers.de?port=9987&cid=$resultC'>$resultN</a>".getClientsInChannel($resultC)."</div>";
+		echo "<div id='$resultC' style='color:white; width: 100%'><p>$resultN</p>" . getClientsInChannel($resultC)  . "</div>";
 		}
         }
 	echo "</div>";
@@ -47,17 +67,15 @@ function auslesenHTML(){
 	}
 
 
-
 function getClientsInChannel($channelid){
- global $clientArray, $clid;
+ global $clientArray;
  $html = "";
  if(isset($clientArray[$channelid])){
  foreach ($clientArray[$channelid] as $client){
-  popen("sh ".__DIR__."/getClients.sh " . $client ,"r");
   $client = preg_replace('/\\\\s/'," ",$client);
   $client = preg_replace('/\\\\p/',"|",$client);
   $client = preg_replace('/\\\\/',"",$client); 
-  $html .= "<p style='font-size: 12px; margin-left: 1%'><img></img>".$client."</p>";
+  $html .= "<p style='font-size: 12px; margin-left: 1%'>".$client."</p>";
  }
  return $html;
 }
@@ -86,20 +104,6 @@ function getClientInfo($search,$start){
 global $position;
 $text = htmlspecialchars(fread(fopen("clients", 'r'),filesize("clients")));
 $posa = strpos($text, $search , $start);
-if($posa === false){
-return false;
-}
-$posa += strlen($search);
-$posb = strpos($text, " ", $posa);
-$len = $posb - $posa;
-$position = $posb;
-return substr($text , $posa , $len);
-}
-
-function getClientMuteStatus($search){
-global $position;
-$text = htmlspecialchars(fread(fopen("clientInfo", 'r'),filesize("clientInfo")));
-$posa = strpos($text, $search);
 if($posa === false){
 return false;
 }
